@@ -1,0 +1,60 @@
+// SCREEN SIZES - Breakpoints for mediaqueries
+
+$screen-xxs:                         375px !default;
+$screen-xs:                          480px !default;
+$screen-sm:                          768px !default;
+$screen-md:                          1024px !default;
+$screen-lg:                          1300px !default;
+$screen-xl:                          1500px !default;
+$screen-xxl:                         1800px !default;
+
+
+// __________________________________________________________ //
+
+@mixin from($device-width) {
+  @media screen and (min-width: $device-width) {
+    @content;
+  }
+}
+
+@mixin xxs {
+  @include from($screen-xxs) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @include from($screen-xs) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @include from($screen-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @include from($screen-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @include from($screen-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @include from($screen-xl) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @include from($screen-xxl) {
+    @content;
+  }
+}
