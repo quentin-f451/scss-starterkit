@@ -20,7 +20,7 @@
   }
 }
 
-@for $i from 0 through 100 {
+@for $i from 0 through 10 {
   .margin-#{$i} {
     @include margin(all, $i);
   }
@@ -68,7 +68,7 @@ $p: null;
   }
 }
 
-@for $i from 0 through 100 {
+@for $i from 0 through 10 {
   .padding-#{$i} {
     @include margin(all, $i);
   }
@@ -104,7 +104,7 @@ $p: null;
   #{$position}: $a;
 }
 
-@for $i from 0 through 100 {
+@for $i from 0 through 10 {
   .t-#{$i} {
     @include absolute(top, $i);
   }

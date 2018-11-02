@@ -5,18 +5,19 @@
 $single-column: 100 / $number-of-columns;
 
 @mixin column($property) {
-  float: left;
   width: $single-column * $property + %;
 }
 
 @mixin subdivision($property) {
-  float: left;
   width: 100 / $property + %;
 }
 
 @mixin offsetcol($property) {
-  float: left;
   margin-left: $single-column * $property + %;
+}
+
+[class*="col-"], [class*="sub-"], [class*="off-"] {
+    float: left;
 }
 
 @for $i from 1 through $number-of-columns {

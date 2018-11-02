@@ -146,7 +146,7 @@ img {
 
 // Z-INDEX
 
-@for $i from 0 through 100 {
+@for $i from 0 through 10 {
   .z-#{$i} {
     z-index: $i;
   }
@@ -157,17 +157,17 @@ img {
 
 // WIDTH
 
-@for $i from 0 through 100 {
+@for $i from 0 through 10 {
   .width-#{$i} {
-    width: $i + %;
+    width: $i * 10 + %;
   }
 }
 
 // HEIGHT
 
-@for $i from 0 through 100 {
+@for $i from 0 through 10 {
   .height-#{$i} {
-    height: $i + %;
+    height: $i * 10 + %;
   }
 }
 
