@@ -1,0 +1,20 @@
+$single-column: 100 / $number-of-columns;
+
+@mixin column($property) {
+  float: left;
+  width: $single-column * $property + %;
+}
+
+@mixin subdivision($property) {
+  float: left;
+  width: 100 / $property + %;
+}
+
+@for $i from 1 through 100 {
+  .col#{$i} {
+    @include column($i);
+  }
+  .sub#{$i} {
+    @include subdivision($i);
+  }
+}
