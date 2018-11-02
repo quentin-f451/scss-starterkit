@@ -18,6 +18,23 @@ html {
 
 // __________________________________________________________ //
 
+// TYPE SIZE
+
+@function get-vw($target) {
+  $vw-context: ($viewport-width-px * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}
+
+html, body {
+  font-size: $text-default-px * 1px;
+  @if $is-global-viewport-text == true {
+    font-size: get-vw($text-default-px * 1px);
+  }
+  line-height: $line-height-default;
+}
+
+// __________________________________________________________ //
+
 // DISPLAY
 
 .disp-b {
@@ -88,7 +105,7 @@ html {
 
 // Z-INDEX
 
-@for $i from 0 through 1000 {
+@for $i from 0 through 100 {
   .z-#{$i} {
     z-index: $i;
   }
@@ -99,7 +116,7 @@ html {
 
 // WIDTH
 
-@for $i from 0 through 1000 {
+@for $i from 0 through 100 {
   .width-#{$i} {
     width: $i + %;
   }
@@ -107,7 +124,7 @@ html {
 
 // HEIGHT
 
-@for $i from 0 through 1000 {
+@for $i from 0 through 100 {
   .height-#{$i} {
     height: $i + %;
   }

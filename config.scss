@@ -1,5 +1,40 @@
 // CONFIGURATE DOCUMENT
 
-$number-of-columns:                         10; // Number of columns (Maximum 100)
-$base-margin:                               10; // Initial margin in px (equivalent of .margin1) - Also used for absolute/fixed positioning
-$base-padding:                              10; // Initial padding in px (equivalent of .padding1)
+// TYPE SIZES
+
+$text-default-px:                           16;       // Default type size in px (default: 16px)
+$line-height-default:                       1.25;     // Default line-height, relative to default type size (default: 1.25)
+
+// Viewport values
+$viewport-width-px:                         1280;     // Screen size used for calculating type size in vw (like http://emilolsson.com/tools/vw-unit-calc-an-online-responsive-css-font-size-calculator/)
+$is-global-viewport-text:                   true;     // true for text size globally defined in vw, false for text size globally defined in px
+
+// Type size - can be any unit
+$text-xxs:                                  0.5rem;   // (default: 0.5rem)
+$text-xs:                                   0.75rem;  // (default: 0.75rem)
+$text-sm:                                   1.0rem;   // (default: 1.0rem)
+$text-md:                                   1.5rem;   // (default: 1.5rem)
+$text-lg:                                   2.0rem;   // (default: 2.0rem)
+$text-xl:                                   3.0rem;   // (default: 3.0rem)
+$text-xxl:                                  6.0rem;   // (default: 6.0rem)
+
+// Line height - realtive to typesize
+$line-xxs:                                  1.0;      // (default: 1.0)
+$line-xs:                                   1.125;    // (default: 1.125)
+$line-sm:                                   1.25;     // (default: 1.25)
+$line-md:                                   1.375;    // (default: 1.375)
+$line-lg:                                   1.5;      // (default: 1.5)
+$line-xl:                                   2.0;      // (default: 2.0)
+$line-xxl:                                  3.0;      // (default: 3.0)
+
+// __________________________________________________________ //
+
+// LAYOUT
+
+$number-of-columns:                         10;       // Number of columns (Maximum 100)
+
+// Base margin, padding and absolute positioning size
+$is-global-viewport-sizes:                  false;    // true for sizes globally defined relatively to default line-height, false for sizes globally defined in px
+$base-margin:                               10;       // Initial margin in px or relative to default line-height (default: 10px)
+$base-padding:                              10;       // Initial padding in px or relative to default line-height (default: 10px)
+$base-absolute:                             10;       // Initial absolute positioning value in px or relative to default line-height (default: 10px)

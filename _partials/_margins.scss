@@ -3,7 +3,10 @@
 // MARGINS
 
 @mixin margin($position, $property) {
-  $m: $base-margin * $property + px;
+  $m: $base-margin * $property * 1px;
+  @if $is-global-viewport-sizes == true {
+    $m: $base-margin * $property * $line-height-default * 1rem;
+  }
   @if $position == 'all' {
     margin: $m;
   } @else if $position == 'horizontal' {
@@ -17,7 +20,7 @@
   }
 }
 
-@for $i from 0 through 1000 {
+@for $i from 0 through 100 {
   .margin-#{$i} {
     @include margin(all, $i);
   }
@@ -45,8 +48,13 @@
 
 // PADDINGS
 
+$p: null;
+
 @mixin padding($position, $property) {
-  $p: $base-padding * $property + px;
+  $p: $base-padding * $property * 1px;
+  @if $is-global-viewport-sizes == true {
+    $p: $base-padding * $property * $line-height-default * 1rem;
+  }
   @if $position == 'all' {
     padding: $p;
   } @else if $position == 'horizontal' {
@@ -60,7 +68,7 @@
   }
 }
 
-@for $i from 0 through 1000 {
+@for $i from 0 through 100 {
   .padding-#{$i} {
     @include margin(all, $i);
   }
@@ -89,11 +97,14 @@
 // ABSOLUTE POSITIONING
 
 @mixin absolute($position, $property) {
-  $a: $base-margin * $property + px;
+  $a: $base-absolute * $property * 1px;
+  @if $is-global-viewport-sizes == true {
+    $a: $base-absolute * $property * $line-height-default * 1rem;
+  }
   #{$position}: $a;
 }
 
-@for $i from 0 through 1000 {
+@for $i from 0 through 100 {
   .t-#{$i} {
     @include absolute(top, $i);
   }
