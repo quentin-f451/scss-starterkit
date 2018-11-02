@@ -1,5 +1,7 @@
 // INITIATE GRID
 
+// COLUMNS, SUBDIVISIONS, LEFT OFFSET
+
 $single-column: 100 / $number-of-columns;
 
 @mixin column($property) {
@@ -18,13 +20,13 @@ $single-column: 100 / $number-of-columns;
 }
 
 @for $i from 1 through 100 {
-  .col#{$i} {
+  .col-#{$i} {
     @include column($i);
   }
-  .sub#{$i} {
+  .sub-#{$i} {
     @include subdivision($i);
   }
-  .off#{$i} {
+  .off-#{$i} {
     @include offsetcol($i);
   }
 }

@@ -1,5 +1,7 @@
 // INITIATE MARGINS AND PADDING
 
+// MARGINS
+
 @mixin margin($position, $property) {
   $m: $base-margin * $property + px;
   @if $position == 'all' {
@@ -16,66 +18,92 @@
 }
 
 @for $i from 0 through 1000 {
-  .margin#{$i} {
+  .margin-#{$i} {
     @include margin(all, $i);
   }
-  .margin-t#{$i} {
+  .margin-t-#{$i} {
     @include margin(top, $i);
   }
-  .margin-b#{$i} {
+  .margin-b-#{$i} {
     @include margin(bottom, $i);
   }
-  .margin-l#{$i} {
+  .margin-l-#{$i} {
     @include margin(left, $i);
   }
-  .margin-r#{$i} {
+  .margin-r-#{$i} {
     @include margin(right, $i);
   }
-  .margin-x#{$i} {
+  .margin-x-#{$i} {
     @include margin(horizontal, $i);
   }
-  .margin-y#{$i} {
+  .margin-y-#{$i} {
     @include margin(vertical, $i);
   }
 }
 
 // __________________________________________________________ //
 
+// PADDINGS
+
 @mixin padding($position, $property) {
-  $m: $base-padding * $property + px;
+  $p: $base-padding * $property + px;
   @if $position == 'all' {
-    padding: $m;
+    padding: $p;
   } @else if $position == 'horizontal' {
-    padding-right: $m;
-    padding-left: $m;
+    padding-right: $p;
+    padding-left: $p;
   } @else if $position == 'vertical' {
-    padding-top: $m;
-    padding-bottom: $m;
+    padding-top: $p;
+    padding-bottom: $p;
   } @else {
-    padding-#{$position}: $m;
+    padding-#{$position}: $p;
   }
 }
 
 @for $i from 0 through 1000 {
-  .padding#{$i} {
+  .padding-#{$i} {
     @include margin(all, $i);
   }
-  .padding-t#{$i} {
+  .padding-t-#{$i} {
     @include margin(top, $i);
   }
-  .padding-b#{$i} {
+  .padding-b-#{$i} {
     @include margin(bottom, $i);
   }
-  .padding-l#{$i} {
+  .padding-l-#{$i} {
     @include margin(left, $i);
   }
-  .padding-r#{$i} {
+  .padding-r-#{$i} {
     @include margin(right, $i);
   }
-  .padding-x#{$i} {
+  .padding-x-#{$i} {
     @include margin(horizontal, $i);
   }
-  .padding-y#{$i} {
+  .padding-y-#{$i} {
     @include margin(vertical, $i);
+  }
+}
+
+// __________________________________________________________ //
+
+// ABSOLUTE POSITIONING
+
+@mixin absolute($position, $property) {
+  $a: $base-margin * $property + px;
+  #{$position}: $a;
+}
+
+@for $i from 0 through 1000 {
+  .t-#{$i} {
+    @include absolute(top, $i);
+  }
+  .b-#{$i} {
+    @include absolute(bottom, $i);
+  }
+  .l-#{$i} {
+    @include absolute(left, $i);
+  }
+  .r-#{$i} {
+    @include absolute(right, $i);
   }
 }

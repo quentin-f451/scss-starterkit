@@ -1,3 +1,7 @@
+// INITIATE BASIC CLASSES
+
+// BORDER-BOX RESET
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -10,4 +14,101 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+}
+
+// __________________________________________________________ //
+
+// DISPLAY
+
+.disp-b {
+  display: block;
+}
+
+.disp-ib {
+  display: inline-block;
+}
+
+.disp-f {
+  display: flex;
+}
+
+.disp-if {
+  display: inline-flex;
+}
+
+.disp-n {
+  display: none;
+}
+
+// OVERFLOW
+
+.scroll {
+  overflow: scroll;
+}
+
+.scroll-x {
+  overflow-x: scroll;
+}
+
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.noscroll-x {
+  overflow-x: hidden;
+}
+
+.noscroll-y {
+  overflow-y: hidden;
+}
+
+// POSITION
+
+.pos-a {
+  position: absolute;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.pos-f {
+  position: fixed;
+}
+
+.pos-s {
+  position: sticky;
+}
+
+// __________________________________________________________ //
+
+// Z-INDEX
+
+@for $i from 0 through 1000 {
+  .z-#{$i} {
+    z-index: $i;
+  }
+  .z-neg-#{$i} {
+    z-index: -$i;
+  }
+}
+
+// WIDTH
+
+@for $i from 0 through 1000 {
+  .width-#{$i} {
+    width: $i + %;
+  }
+}
+
+// HEIGHT
+
+@for $i from 0 through 1000 {
+  .height-#{$i} {
+    height: $i + %;
+  }
 }
