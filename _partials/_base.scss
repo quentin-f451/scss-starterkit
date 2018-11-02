@@ -31,6 +31,16 @@ html, body {
     font-size: get-vw($text-default-px * 1px);
   }
   line-height: $line-height-default;
+  color: $text-color;
+  background-color: $background-color;
+  font-family: $primary-font-family, $primary-fallback;
+}
+
+a {
+  color: $link-color;
+  &:hover {
+    color: $hover-color;
+  }
 }
 
 // __________________________________________________________ //

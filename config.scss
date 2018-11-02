@@ -10,13 +10,13 @@ $viewport-width-px:                         1280;     // Screen size used for ca
 $is-global-viewport-text:                   true;     // true for text size globally defined in vw, false for text size globally defined in px
 
 // Type size - can be any unit
-$text-xxs:                                  0.5rem;   // (default: 0.5rem)
-$text-xs:                                   0.75rem;  // (default: 0.75rem)
-$text-sm:                                   1.0rem;   // (default: 1.0rem)
-$text-md:                                   1.5rem;   // (default: 1.5rem)
-$text-lg:                                   2.0rem;   // (default: 2.0rem)
-$text-xl:                                   3.0rem;   // (default: 3.0rem)
-$text-xxl:                                  6.0rem;   // (default: 6.0rem)
+$text-xxs:                                  0.5rem;   // (default: 0.5rem)  -- small
+$text-xs:                                   0.75rem;  // (default: 0.75rem) -- h6
+$text-sm:                                   1.0rem;   // (default: 1.0rem)  -- h5
+$text-md:                                   1.5rem;   // (default: 1.5rem)  -- h4
+$text-lg:                                   2.0rem;   // (default: 2.0rem)  -- h3
+$text-xl:                                   3.0rem;   // (default: 3.0rem)  -- h2
+$text-xxl:                                  6.0rem;   // (default: 6.0rem)  -- h1
 
 // Line height - realtive to typesize
 $line-xxs:                                  1.0;      // (default: 1.0)
@@ -29,6 +29,25 @@ $line-xxl:                                  3.0;      // (default: 3.0)
 
 // __________________________________________________________ //
 
+// FONTS
+
+$primary-font-family:                       '';
+$primary-fallback:                          'Times New Roman', Times, serif;
+$secondary-font-family:                     '';
+$secondary-fallback:                        Garamond, 'Hoefler Text', 'Times New Roman', Times, serif;
+$tertiary-font-family:                      '';
+$tertiary-fallback:                         'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+/*
+Fallbacks
+ - 'Times New Roman', Times, serif
+ - Garamond, 'Hoefler Text', 'Times New Roman', Times, serif
+ - 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif
+ - 'Courier New', Courier, monospace
+*/
+
+// __________________________________________________________ //
+
 // LAYOUT
 
 $number-of-columns:                         10;       // Number of columns (Maximum 100)
@@ -38,3 +57,15 @@ $is-global-viewport-sizes:                  false;    // true for sizes globally
 $base-margin:                               10;       // Initial margin in px or relative to default line-height (default: 10px)
 $base-padding:                              10;       // Initial padding in px or relative to default line-height (default: 10px)
 $base-absolute:                             10;       // Initial absolute positioning value in px or relative to default line-height (default: 10px)
+
+// __________________________________________________________ //
+
+// COLORS
+
+$text-color:                                black;    // Text color
+$hover-color:                               blue;     // Hover color
+$link-color:                                black;    // Link color
+$primary-color:                             black;    // Color 1
+$secondary-color:                           black;    // Color 2
+$tertiary-color:                            black;    // Color 3
+$background-color:                          white;    // Background color

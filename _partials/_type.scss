@@ -1,36 +1,40 @@
 // INITIATE TYPE SIZES
 
-.text-xxs{
+.text-xxs, small{
   font-size: $text-xxs;
 }
 
-.text-xs{
+.text-xs, h6{
   font-size: $text-xs;
 }
 
-.text-sm{
+.text-sm, h5{
   font-size: $text-sm;
 }
 
-.text-md{
+.text-md, h4{
   font-size: $text-md;
 }
 
-.text-lg{
+.text-lg, h3{
   font-size: $text-lg;
 }
 
-.text-xl{
+.text-xl, h2{
   font-size: $text-xl;
 }
 
-.text-xxl{
+.text-xxl, h1{
   font-size: $text-xxl;
 }
 
 // __________________________________________________________ //
 
 // INITIATE LINE HEIGHT
+
+h1, h2, h3, h4, h5, h6, small {
+  line-height: $line-height-default;
+}
 
 .line-xxs{
   line-height: $line-xxs;
