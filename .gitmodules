@@ -1,0 +1,4 @@
+[submodule "_lib/normalize/normalize.css"]
+	path = _lib/normalize/normalize.css
+	url = https://github.com/necolas/normalize.css/
+	branch = master
