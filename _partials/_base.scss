@@ -1,6 +1,6 @@
 // INITIATE BASIC CLASSES
 
-// BORDER-BOX RESET
+// BORDER-BOX, RESET
 
 html {
   -webkit-box-sizing: border-box;
@@ -14,6 +14,18 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+}
+
+* {
+margin: 0;
+}
+
+html,
+body {
+-webkit-tap-highlight-color: transparent;
+height: 100%;
+margin: 0 !important;
+padding: 0 !important;
 }
 
 // __________________________________________________________ //
@@ -37,10 +49,32 @@ html, body {
 }
 
 a {
-  color: $link-color;
-  &:hover {
-    color: $hover-color;
-  }
+color: $link-color;
+text-decoration: none;
+
+	&:hover {
+	color: $hover-color;
+	text-decoration: none;
+	cursor: pointer;
+	}
+
+	&:active, &:visited, &:focus {
+    text-decoration: none;
+    color: inherit;
+	}
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
 }
 
 // __________________________________________________________ //
@@ -138,4 +172,19 @@ a {
   .height-#{$i} {
     height: $i + %;
   }
+}
+
+// __________________________________________________________ //
+
+// TRANSITIONS
+
+@mixin add-transition($transition, $speed, $animation) {
+  transition: $transition $speed $animation;
+  -moz-transition: $transition $speed $animation;
+  -webkit-transition: $transition $speed $animation;
+  -o-transition: $transition $speed $animation;
+}
+
+.base-transition {
+  @include add-transition(all, $base-transition-timing, $base-transition-type);
 }

@@ -28,6 +28,47 @@
   font-size: $text-xxl;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+  @extend .text-hyphenate;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}
+
+.text-hyphenate {
+  -ms-word-break: normal;
+  word-break: normal;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+.text-hyphenate-0 {
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  hyphens: none;
+  -ms-hyphens: none;
+}
+
 // __________________________________________________________ //
 
 // INITIATE LINE HEIGHT
