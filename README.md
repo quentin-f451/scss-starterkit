@@ -1,8 +1,17 @@
 # SCSS Base
 
+A modular and customizable base for SCSS compiled website, only created for my personal needs and habits.
+
+## Table of contents
+
++ [Usage]
++ [List of variables]
++ [List of classes]
++ [To-do]
+
 ## Usage
 
-Add this to any project with compiled SCSS. Created for my personal needs.
+Add this to any project with compiled SCSS.
 
 1. Fill in the `config.scss` file with your values.
 2. Add your own modules and `.scss` files in `_modules` folder.
@@ -12,7 +21,7 @@ Add this to any project with compiled SCSS. Created for my personal needs.
 ```
 4. Compile
 
-## List of variables available
+## List of variables
 
 All these variables can be changed in the `config.scss` file.
 
@@ -83,7 +92,7 @@ The default values for globally set **transitions**.
 + `$base-transition-speed` Default **speed** for transitions — Default: `.3s`
 + `$base-transition-type` Default **type** of transition — Default: `ease-in-out`
 
-## List of classes available
+## List of classes
 
 + Simple, non-variable classes: [Text](https://github.com/quentin-f451/scss-base/tree/master#text), [Display](https://github.com/quentin-f451/scss-base/tree/master#display), [Overflow](https://github.com/quentin-f451/scss-base/tree/master#overflow), [Position](https://github.com/quentin-f451/scss-base/tree/master#position)
 + Variable classes: 
@@ -211,3 +220,8 @@ The default values for globally set **transitions**.
   position: sticky;
 }
  ```
+
+## To-do
+
++ [ ] Optimize the classes
++ [ ] Test it on a real project
