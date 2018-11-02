@@ -1,3 +1,6 @@
-_sv_config.yml
+node_modules/
+package.json
+package-lock.json
 index.html
-sv_custom.css
+style.css
+style.min.css
