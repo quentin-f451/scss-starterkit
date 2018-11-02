@@ -10,11 +10,19 @@ $single-column: 100 / $number-of-columns;
   width: 100 / $property + %;
 }
 
+@mixin offsetcol($property) {
+  float: left;
+  margin-left: $single-column * $property + %;
+}
+
 @for $i from 1 through 100 {
   .col#{$i} {
     @include column($i);
   }
   .sub#{$i} {
     @include subdivision($i);
+  }
+  .off#{$i} {
+    @include offsetcol($i);
   }
 }
