@@ -7,6 +7,8 @@ A modular and customizable base for SCSS compiled website, only created for my p
 + [Usage](https://github.com/quentin-f451/scss-base#usage)
 + [List of variables](https://github.com/quentin-f451/scss-base#list-of-variables)
 + [List of classes](https://github.com/quentin-f451/scss-base#list-of-classes)
+  + [Simple, non-variable classes](https://github.com/quentin-f451/scss-base#simple-non-variable-classes)
+  + [Variable classes](https://github.com/quentin-f451/scss-base#variable-classes)
 + [To-do](https://github.com/quentin-f451/scss-base#to-do)
 
 ## Usage
@@ -106,7 +108,7 @@ The default values for responsive **breakpoints** *in px*.
 ## List of classes
 
 + Simple, non-variable classes: [Text](https://github.com/quentin-f451/scss-base/tree/master#text), [Display](https://github.com/quentin-f451/scss-base/tree/master#display), [Overflow](https://github.com/quentin-f451/scss-base/tree/master#overflow), [Position](https://github.com/quentin-f451/scss-base/tree/master#position)
-+ Variable classes:
++ Variable classes: [Column layout](https://github.com/quentin-f451/scss-base#column-layout), [Margins, paddings, positioning](https://github.com/quentin-f451/scss-base#margins-paddings-positioning), [Colors](https://github.com/quentin-f451/scss-base#colors), [Z-Index](https://github.com/quentin-f451/scss-base#z-index), [Height and width](https://github.com/quentin-f451/scss-base#height-and-width), [Transition](https://github.com/quentin-f451/scss-base#transition), [Fonts](https://github.com/quentin-f451/scss-base#fonts), [Typesetting](https://github.com/quentin-f451/scss-base#typesetting)
 
 ### Simple, non-variable classes
 
