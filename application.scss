@@ -7,6 +7,7 @@
 @import "config"; // Initial values
 
 // IMPORT PARTIALS
+@import "_partials/_base"; // Initiate basic elements
 @import "_partials/_fonts"; // Initiate fonts
 @import "_partials/_grid"; // Initiate grid
 @import "_partials/_mediaqueries"; // Initiate mediaqueries
