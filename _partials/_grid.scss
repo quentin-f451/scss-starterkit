@@ -19,7 +19,7 @@ $single-column: 100 / $number-of-columns;
   margin-left: $single-column * $property + %;
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through $number-of-columns {
   .col-#{$i} {
     @include column($i);
   }

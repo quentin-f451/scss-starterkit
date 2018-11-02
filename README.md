@@ -66,7 +66,7 @@ Fonts need to be linked in the `_partials/_fonts.scss` file. Their name will be 
 
 ### Default layout values
 
-+ `$number-of-columns` Number of **columns** that divide the width of the container. It can be applied at any level in the code. *Must be between **1** and **20*** — Default: `12`
++ `$number-of-columns` Number of **columns** that divide the width of the container. It can be applied at any level in the code. — Default: `12`
 + `$is-global-viewport-sizes` `true` or `false`. `true` will define `$base-margin`, `$base-padding` and `$base-absolute` in `unitless` values relatively to `$line-height-default`, `false` will define `$base-margin`, `$base-padding` and `$base-absolute` in `px` values. - Default: `false`
 
 If `$is-global-viewport-sizes` is set to `true`, the three following variables are `unitless`. If `$is-global-viewport-sizes` is set to `false`, the three following variables are in `px`.
