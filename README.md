@@ -4,10 +4,10 @@ A modular and customizable base for SCSS compiled website, only created for my p
 
 ## Table of contents
 
-+ [Usage]
-+ [List of variables]
-+ [List of classes]
-+ [To-do]
++ [Usage](https://github.com/quentin-f451/scss-base#usage)
++ [List of variables](https://github.com/quentin-f451/scss-base#list-of-variables)
++ [List of classes](https://github.com/quentin-f451/scss-base#list-of-classes)
++ [To-do](https://github.com/quentin-f451/scss-base#to-do)
 
 ## Usage
 
