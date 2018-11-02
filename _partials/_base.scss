@@ -183,5 +183,5 @@ img {
 }
 
 .base-transition {
-  @include add-transition(all, $base-transition-timing, $base-transition-type);
+  @include add-transition($base-transition-selector, $base-transition-speed, $base-transition-type);
 }
