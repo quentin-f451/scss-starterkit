@@ -1,0 +1,81 @@
+// INITIATE MARGINS AND PADDING
+
+@mixin margin($position, $property) {
+  $m: $base-margin * $property + px;
+  @if $position == 'all' {
+    margin: $m;
+  } @else if $position == 'horizontal' {
+    margin-right: $m;
+    margin-left: $m;
+  } @else if $position == 'vertical' {
+    margin-top: $m;
+    margin-bottom: $m;
+  } @else {
+    margin-#{$position}: $m;
+  }
+}
+
+@for $i from 0 through 1000 {
+  .margin#{$i} {
+    @include margin(all, $i);
+  }
+  .margin-t#{$i} {
+    @include margin(top, $i);
+  }
+  .margin-b#{$i} {
+    @include margin(bottom, $i);
+  }
+  .margin-l#{$i} {
+    @include margin(left, $i);
+  }
+  .margin-r#{$i} {
+    @include margin(right, $i);
+  }
+  .margin-x#{$i} {
+    @include margin(horizontal, $i);
+  }
+  .margin-y#{$i} {
+    @include margin(vertical, $i);
+  }
+}
+
+// __________________________________________________________ //
+
+@mixin padding($position, $property) {
+  $m: $base-padding * $property + px;
+  @if $position == 'all' {
+    padding: $m;
+  } @else if $position == 'horizontal' {
+    padding-right: $m;
+    padding-left: $m;
+  } @else if $position == 'vertical' {
+    padding-top: $m;
+    padding-bottom: $m;
+  } @else {
+    padding-#{$position}: $m;
+  }
+}
+
+@for $i from 0 through 1000 {
+  .padding#{$i} {
+    @include margin(all, $i);
+  }
+  .padding-t#{$i} {
+    @include margin(top, $i);
+  }
+  .padding-b#{$i} {
+    @include margin(bottom, $i);
+  }
+  .padding-l#{$i} {
+    @include margin(left, $i);
+  }
+  .padding-r#{$i} {
+    @include margin(right, $i);
+  }
+  .padding-x#{$i} {
+    @include margin(horizontal, $i);
+  }
+  .padding-y#{$i} {
+    @include margin(vertical, $i);
+  }
+}
