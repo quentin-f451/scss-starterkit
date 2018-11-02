@@ -28,32 +28,32 @@
   font-size: $text-xxl;
 }
 
-.text-left {
+.text-l {
   text-align: left;
 }
 
-.text-right {
+.text-r {
   text-align: right;
 }
 
-.text-center {
+.text-c {
   text-align: center;
 }
 
-.text-justify {
+.justify {
   text-align: justify;
-  @extend .text-hyphenate;
+  @extend .hyphen;
 }
 
-.text-uppercase {
+.uppercase {
   text-transform: uppercase;
 }
 
-.text-lowercase {
+.lowercase {
   text-transform: lowercase;
 }
 
-.text-hyphenate {
+.hyphen {
   -ms-word-break: normal;
   word-break: normal;
   word-break: break-word;
@@ -62,7 +62,7 @@
   hyphens: auto;
 }
 
-.text-hyphenate-no {
+.no-hyphen {
   -webkit-hyphens: none;
   -moz-hyphens: none;
   hyphens: none;

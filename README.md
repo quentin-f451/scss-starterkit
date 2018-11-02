@@ -15,7 +15,7 @@ Add this to any project with compiled SCSS.
 
 1. Fill in the `config.scss` file with your values.
 2. Add your own modules and `.scss` files in `_modules` folder.
-3. Link them at the end of the `application.scss` file 
+3. Link them at the end of the `application.scss` file
 ```css
 @import "_modules/name_of_the_module.scss";
 ```
@@ -32,7 +32,7 @@ All these variables can be changed in the `config.scss` file.
 + `$is-global-viewport-text` `true` or `false`. `true` will convert `html, body` font-size to `vw` responsive unit, `false` will let `html, body` font-size in `px`. - Default: `true`
 + `$viewport-width-px` Referencial wiewport width to convert `html, body` font-size in `vw` responsive unit. Will only have effect of `$is-global-viewport-text` is set to `true`. See [here](http://emilolsson.com/tools/vw-unit-calc-an-online-responsive-css-font-size-calculator/) for explanation on viewport font-size unit. - Default: `1280`
 
-### Default font sizes 
+### Default font sizes
 
 The default font sizes can be set in *any unit*. By default, font sizes are set in `rem`, so relatively to `$text-default-px`. **These are the only variable that need a unit specified directly in the variable**.
 + `$text-xxs` XXtra Small font-size (applied by default to `small`) — Default: `0.5rem`
@@ -43,7 +43,7 @@ The default font sizes can be set in *any unit*. By default, font sizes are set 
 + `$text-xl` Xtra Large font-size (applied by default to `h2`) — Default: `3.0rem`
 + `$text-xxl` XXtra Large font-size (applied by default to `h1`) — Default: `6.0rem`
 
-### Default line heights 
+### Default line heights
 
 The default line height are set *unitless*, relative to text. See [here](https://css-tricks.com/almanac/properties/l/line-height/).
 + `$line-xxs` XXtra Small line-height — Default: `1.0`
@@ -57,11 +57,11 @@ The default line height are set *unitless*, relative to text. See [here](https:/
 ### Default font values
 
 Fonts need to be linked in the `_partials/_fonts.scss` file. Their name will be the one you choose in the variables.
-+ `$primary-font-family` Primary font (applied by default to `html, body`) — No default value, it can be any name. 
++ `$primary-font-family` Primary font (applied by default to `html, body`) — No default value, it can be any name.
 + `$primary-fallback` Primary fallback font (applied by default to `html, body`) — No default value, it can be any name.
-+ `$secondary-font-family` Secondary font — No default value, it can be any name. 
++ `$secondary-font-family` Secondary font — No default value, it can be any name.
 + `$secondary-fallback` Secondary fallback font — No default value, it can be any name.
-+ `$tertiary-font-family` Tertiary font — No default value, it can be any name. 
++ `$tertiary-font-family` Tertiary font — No default value, it can be any name.
 + `$tertiary-fallback` Tertiary fallback font — No default value, it can be any name.
 
 ### Default layout values
@@ -74,7 +74,7 @@ If `$is-global-viewport-sizes` is set to `true`, the three following variables a
 + `$base-padding` Default **padding** value *in px* or *unitless*. - Default: `10`
 + `$base-absolute` Default **absolute positioning** value (`top`, `bottom`, `right` and `left`) *in px* or *unitless*. - Default: `10`
 
-### Default color values 
+### Default color values
 
 Colors can be set in any kind of css way. (Ex: `black` or `#000000` or `#000` or `rgba(0,0,0,1)`).
 + `$text-color` Default **text** color (applied by default to `html, body`) — Default: `black`
@@ -95,26 +95,23 @@ The default values for globally set **transitions**.
 ## List of classes
 
 + Simple, non-variable classes: [Text](https://github.com/quentin-f451/scss-base/tree/master#text), [Display](https://github.com/quentin-f451/scss-base/tree/master#display), [Overflow](https://github.com/quentin-f451/scss-base/tree/master#overflow), [Position](https://github.com/quentin-f451/scss-base/tree/master#position)
-+ Variable classes: 
++ Variable classes:
 
 ### Simple, non-variable classes
 
 #### Text
 
  ```css
-.text-left {
+.text-l {
   text-align: left;
 }
-
-.text-right {
+.text-r {
   text-align: right;
 }
-
-.text-center {
+.text-c {
   text-align: center;
 }
-
-.text-justify {
+.justify {
   text-align: justify;
   -ms-word-break: normal;
   word-break: normal;
@@ -123,16 +120,13 @@ The default values for globally set **transitions**.
   -moz-hyphens: auto;
   hyphens: auto;
 }
-
-.text-uppercase {
+.uppercase {
   text-transform: uppercase;
 }
-
-.text-lowercase {
+.lowercase {
   text-transform: lowercase;
 }
-
-.text-hyphenate {
+.hyphen {
   -ms-word-break: normal;
   word-break: normal;
   word-break: break-word;
@@ -140,82 +134,69 @@ The default values for globally set **transitions**.
   -moz-hyphens: auto;
   hyphens: auto;
 }
-
-.text-hyphenate-no {
+.no-hyphen {
   -webkit-hyphens: none;
   -moz-hyphens: none;
   hyphens: none;
   -ms-hyphens: none;
 }
  ```
- 
+
 #### Display
- 
+
  ```css
 .disp-b {
   display: block;
 }
-
 .disp-ib {
   display: inline-block;
 }
-
 .disp-f {
   display: flex;
 }
-
 .disp-if {
   display: inline-flex;
 }
-
 .disp-n {
   display: none;
 }
  ```
 
 #### Overflow
- 
+
  ```css
 .scroll {
   overflow: scroll;
 }
-
 .scroll-x {
   overflow-x: scroll;
 }
-
 .scroll-y {
   overflow-y: scroll;
 }
-
-.noscroll {
+.no-scroll {
   overflow: hidden;
 }
-
-.noscroll-x {
+.no-scroll-x {
   overflow-x: hidden;
 }
-
-.noscroll-y {
+.no-scroll-y {
   overflow-y: hidden;
 }
  ```
 
 #### Position
- 
+
  ```css
 .pos-a {
   position: absolute;
 }
-
 .pos-r {
   position: relative;
 }
-
 .pos-f {
   position: fixed;
 }
-
 .pos-s {
   position: sticky;
 }
