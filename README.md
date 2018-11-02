@@ -101,7 +101,7 @@ The default values for globally set **transitions**.
 
 #### Text
 
- ```css
+```css
 .text-l {
   text-align: left;
 }
@@ -140,11 +140,11 @@ The default values for globally set **transitions**.
   hyphens: none;
   -ms-hyphens: none;
 }
- ```
+```
 
 #### Display
 
- ```css
+```css
 .disp-b {
   display: block;
 }
@@ -160,11 +160,11 @@ The default values for globally set **transitions**.
 .disp-n {
   display: none;
 }
- ```
+```
 
 #### Overflow
 
- ```css
+```css
 .scroll {
   overflow: scroll;
 }
@@ -183,11 +183,11 @@ The default values for globally set **transitions**.
 .no-scroll-y {
   overflow-y: hidden;
 }
- ```
+```
 
 #### Position
 
- ```css
+```css
 .pos-a {
   position: absolute;
 }
@@ -200,7 +200,73 @@ The default values for globally set **transitions**.
 .pos-s {
   position: sticky;
 }
- ```
+```
+
+### Variable classes
+
+#### Column layout
+
+Depending on the number of columns set at `$number-of-columns`, three types of classes allow to work on column layouts.
+`.col-` to specify the width of a `div` with a number of columns. `.sub-` to specify a subdivision by a certain number. `.off-` to specify a `margin-left` value with a number of columns.
+For example, in a 12-column layout:
+
+```css
+.col-3 {
+  width: 25%; // 100 / `$number-of-columns` * 3
+}
+.col-4 {
+  width: 33.33333%;
+}
+.sub-3 {
+  width: 33.33333%;
+}
+.sub-4 {
+  width: 25%;
+}
+.off-3 {
+  margin-left: 25%;
+}
+.off-4 {
+  width: 33.33333%;
+}
+```
+
+#### Colors
+
+Depending on the value of the variables `$text-color`, `$primary-color`, `$secondary-color`, `$tertiary-color` and `$background-color`.
+
+```css
+.text-color {
+  color: $text-color;
+}
+.background-color {
+  background-color: $background-color;
+}
+
+.color-1 {
+  color: $primary-color;
+}
+
+.color-2 {
+  color: $secondary-color;
+}
+
+.color-3 {
+  color: $tertiary-color;
+}
+
+.bg-color-1 {
+  background-color: $primary-color;
+}
+
+.bg-color-2 {
+  background-color: $secondary-color;
+}
+
+.bg-color-3 {
+  background-color: $tertiary-color;
+}
+```
 
 ## To-do
 
