@@ -8,9 +8,7 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*:after,
-*:before {
+*, *:after, *:before {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
@@ -20,12 +18,11 @@ html {
 margin: 0;
 }
 
-html,
-body {
--webkit-tap-highlight-color: transparent;
-height: 100%;
-margin: 0 !important;
-padding: 0 !important;
+body, html {
+  -webkit-tap-highlight-color: transparent;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 // __________________________________________________________ //
