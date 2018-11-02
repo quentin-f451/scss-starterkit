@@ -1,15 +1,5 @@
 // SCREEN SIZES - Breakpoints for mediaqueries
 
-$screen-xxs:                                375px;
-$screen-xs:                                 480px;
-$screen-sm:                                 768px;
-$screen-md:                                 1024px;
-$screen-lg:                                 1300px;
-$screen-xl:                                 1500px;
-$screen-xxl:                                1800px;
-
-// __________________________________________________________ //
-
 @mixin from($device-width) {
   @media screen and (min-width: $device-width) {
     @content;
@@ -17,43 +7,43 @@ $screen-xxl:                                1800px;
 }
 
 @mixin screen-xxs {
-  @include from($screen-xxs) {
+  @include from($screen-xxs * 1px) {
     @content;
   }
 }
 
 @mixin screen-xs {
-  @include from($screen-xs) {
+  @include from($screen-xs * 1px) {
     @content;
   }
 }
 
 @mixin screen-sm {
-  @include from($screen-sm) {
+  @include from($screen-sm * 1px) {
     @content;
   }
 }
 
 @mixin screen-md {
-  @include from($screen-md) {
+  @include from($screen-md * 1px) {
     @content;
   }
 }
 
 @mixin screen-lg {
-  @include from($screen-lg) {
+  @include from($screen-lg * 1px) {
     @content;
   }
 }
 
 @mixin screen-xl {
-  @include from($screen-xl) {
+  @include from($screen-xl * 1px) {
     @content;
   }
 }
 
 @mixin screen-xxl {
-  @include from($screen-xxl) {
+  @include from($screen-xxl * 1px) {
     @content;
   }
 }

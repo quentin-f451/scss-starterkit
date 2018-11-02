@@ -92,6 +92,17 @@ The default values for globally set **transitions**.
 + `$base-transition-speed` Default **speed** for transitions — Default: `.3s`
 + `$base-transition-type` Default **type** of transition — Default: `ease-in-out`
 
+### Default breakpoint values
+
+The default values for responsive **breakpoints** *in px*.
++ `$screen-xxs` XXtra Small minimum screen width — Default: `375`
++ `$screen-xs` Xtra Small minimum screen width — Default: `480`
++ `$screen-sm` Small minimum screen width — Default: `768`
++ `$screen-md` Medium minimum screen width — Default: `1024`
++ `$screen-lg` Large minimum screen width — Default: `1300`
++ `$screen-xl` Xtra Large minimum screen width — Default: `1500`
++ `$screen-xxl` XXtra Large minimum screen width — Default: `1800`
+
 ## List of classes
 
 + Simple, non-variable classes: [Text](https://github.com/quentin-f451/scss-base/tree/master#text), [Display](https://github.com/quentin-f451/scss-base/tree/master#display), [Overflow](https://github.com/quentin-f451/scss-base/tree/master#overflow), [Position](https://github.com/quentin-f451/scss-base/tree/master#position)
@@ -211,32 +222,33 @@ Depending on the number of columns set at `$number-of-columns`, three types of c
 
 ```css
 .col-{number} {
-  width: 100 / {$number-of-columns} * {number}%
+  width: 100 / {$number-of-columns} * {number}%;
+}
+.sub-{number} {
+  width: 100 / {number}%;
+}
+.off-{number} {
+  margin-left: 100 / {$number-of-columns} * {number}%;
 }
 ```
 
-For example, in a 12-column layout:
+`{number}` must be between `1` and `$number-of-columns`. For example, in a 12-column layout:
 
 ```css
 .col-3 {
-  width: 25%; //
-}
-.col-4 {
-  width: 33.33333%;
+  width: 25%;
 }
 .sub-3 {
   width: 33.33333%;
 }
-.sub-4 {
-  width: 25%;
-}
 .off-3 {
   margin-left: 25%;
 }
-.off-4 {
-  width: 33.33333%;
-}
 ```
+
+#### Margins, paddings, positioning
+
+Depending on the value of the variables `$is-global-viewport-sizes`, `$base-margin`, `$base-padding` and `$base-absolute`.
 
 #### Colors
 
@@ -244,38 +256,109 @@ Depending on the value of the variables `$text-color`, `$primary-color`, `$secon
 
 ```css
 .text-color {
-  color: $text-color;
+  color: {$text-color};
 }
 .background-color {
-  background-color: $background-color;
+  background-color: {$background-color};
 }
-
 .color-1 {
-  color: $primary-color;
+  color: {$primary-color};
 }
-
 .color-2 {
-  color: $secondary-color;
+  color: {$secondary-color};
 }
-
 .color-3 {
-  color: $tertiary-color;
+  color: {$tertiary-color};
 }
-
 .bg-color-1 {
-  background-color: $primary-color;
+  background-color: {$primary-color};
 }
-
 .bg-color-2 {
-  background-color: $secondary-color;
+  background-color: {$secondary-color};
 }
-
 .bg-color-3 {
-  background-color: $tertiary-color;
+  background-color: {$tertiary-color};
+}
+```
+
+#### Z-Index
+
+With `{number}` between `0` and `10`.
+
+```css
+.z-{number} {
+  z-index: {number};
+}
+.z-neg-{number} {
+  z-index: -{number};
+}
+```
+
+For example:
+
+```css
+.z-8 {
+  z-index: 8;
+}
+.z-neg-5 {
+  z-index: -5;
+}
+```
+
+#### Height and width
+
+With `{number}` between `0` and `10`.
+
+```css
+.width-{number} {
+  width: {number} * 10%;
+}
+.height-{number} {
+  height: {number} * 10%;
+}
+```
+
+For example:
+
+```css
+.width-4 {
+  width: 40%;
+}
+.height-8 {
+  height: 80%;
+}
+```
+
+#### Transition
+
+Depending on the value of the variables `$base-transition-selector`, `$base-transition-speed` and `$base-transition-type`.
+
+```css
+.base-transition {
+  transition: {$base-transition-selector} {$base-transition-speed} {$base-transition-type};
+  -moz-transition: {$base-transition-selector} {$base-transition-speed} {$base-transition-type};
+  -webkit-transition: {$base-transition-selector} {$base-transition-speed} {$base-transition-type};
+  -o-transition: {$base-transition-selector} {$base-transition-speed} {$base-transition-type};
+}
+```
+
+#### Fonts
+
+Depending on the value of the variables `$primary-font-family`, `$secondary-font-family`, `$tertiary-font-family`, `$primary-fallback`, `$secondary-fallback` and `$tertiary-fallback`.
+
+```css
+.font-1 {
+  font-family: {$primary-font-family}, {$primary-fallback};
+}
+.font-2 {
+  font-family: {$secondary-font-family}, {$secondary-fallback};
+}
+.font-3 {
+  font-family: {$tertiary-font-family}, {$tertiary-fallback};
 }
 ```
 
 ## To-do
 
-+ [ ] Optimize the classes
++ [x] Optimize the classes
 + [ ] Test it on a real project
