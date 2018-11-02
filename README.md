@@ -208,11 +208,18 @@ The default values for globally set **transitions**.
 
 Depending on the number of columns set at `$number-of-columns`, three types of classes allow to work on column layouts.
 `.col-` to specify the width of a `div` with a number of columns. `.sub-` to specify a subdivision by a certain number. `.off-` to specify a `margin-left` value with a number of columns.
+
+```css
+.col-{number} {
+  width: 100 / {$number-of-columns} * {number}%
+}
+```
+
 For example, in a 12-column layout:
 
 ```css
 .col-3 {
-  width: 25%; // 100 / `$number-of-columns` * 3
+  width: 25%; //
 }
 .col-4 {
   width: 33.33333%;
