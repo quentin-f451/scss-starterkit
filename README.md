@@ -232,7 +232,7 @@ Depending on the number of columns set at `$number-of-columns`, three types of c
 }
 ```
 
-`{number}` must be between `1` and `$number-of-columns`. For example, in a 12-column layout:
+`{number}` must be between `1` and `$number-of-columns`. For example, for `$number-of-columns: 12`:
 
 ```css
 .col-3 {
@@ -248,7 +248,91 @@ Depending on the number of columns set at `$number-of-columns`, three types of c
 
 #### Margins, paddings, positioning
 
-Depending on the value of the variables `$is-global-viewport-sizes`, `$base-margin`, `$base-padding` and `$base-absolute`.
+Depending on the value of the variables `$is-global-viewport-sizes`, `$base-margin`, `$base-padding` and `$base-absolute`. With `{number}` between `0` and `10`.
+
+```css
+.margin-{number} {
+  margin: 1px * {$base-margin} * {number};
+}
+.margin-t-{number} {
+  margin-top: 1px * {$base-margin} * {number};
+}
+.margin-r-{number} {
+  margin-right: 1px * {$base-margin} * {number};
+}
+.margin-b-{number} {
+  margin-bottom: 1px * {$base-margin} * {number};
+}
+.margin-l-{number} {
+  margin-left: 1px * {$base-margin} * {number};
+}
+.margin-x-{number} {
+  margin-right: 1px * {$base-margin} * {number};
+  margin-left: 1px * {$base-margin} * {number};
+}
+.margin-y-{number} {
+  margin-top: 1px * {$base-margin} * {number};
+  margin-bottom: 1px * {$base-margin} * {number};
+}
+.padding-{number} {
+  padding: 1px * {$base-padding} * {number};
+}
+.padding-t-{number} {
+  padding-top: 1px * {$base-padding} * {number};
+}
+.padding-r-{number} {
+  padding-right: 1px * {$base-padding} * {number};
+}
+.padding-b-{number} {
+  padding-bottom: 1px * {$base-padding} * {number};
+}
+.padding-l-{number} {
+  padding-left: 1px * {$base-padding} * {number};
+}
+.padding-x-{number} {
+  padding-right: 1px * {$base-padding} * {number};
+  padding-left: 1px * {$base-padding} * {number};
+}
+.padding-y-{number} {
+  padding-top: 1px * {$base-padding} * {number};
+  padding-bottom: 1px * {$base-padding} * {number};
+}
+.top-{number} {
+  top: 1px * {$base-padding} * {number};
+}
+.right-{number} {
+  right: 1px * {$base-padding} * {number};
+}
+.bottom-{number} {
+  bottom: 1px * {$base-padding} * {number};
+}
+.left-{number} {
+  left: 1px * {$base-padding} * {number};
+}
+```
+
+For example, for `$base-margin: 10`:
+
+```css
+.margin-4 {
+  margin: 40px;
+}
+.margin-x-8 {
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+```
+
+If `$is-global-viewport-sizes` is set to `true`, the formula to get the margin will change from `1px * {$base-padding} * {number}` to `1rem * {$line-height-default} * {$base-padding} * {number}`. For example, for `$base-padding: 1` and `$line-height-default: 1.25`:
+
+```css
+.padding-3 {
+  padding: 3.75rem;
+}
+.padding-r-6 {
+  padding-right: 7.5rem;
+}
+```
 
 #### Colors
 
@@ -358,7 +442,57 @@ Depending on the value of the variables `$primary-font-family`, `$secondary-font
 }
 ```
 
+#### Typesetting
+
+Depending on the value of the `$text-` and `$line-` kinds of variables.
+
+```css
+.text-xxs{
+  font-size: {$text-xxs};
+}
+.text-xs{
+  font-size: {$text-xs};
+}
+.text-sm{
+  font-size: {$text-sm};
+}
+.text-md{
+  font-size: {$text-md};
+}
+.text-lg{
+  font-size: {$text-lg};
+}
+.text-xl{
+  font-size: {$text-xl};
+}
+.text-xxl{
+  font-size: {$text-xxl};
+}
+.line-xxs{
+  line-height: {$line-xxs};
+}
+.line-xs{
+  line-height: {$line-xs};
+}
+.line-sm{
+  line-height: {$line-sm};
+}
+.line-md{
+  line-height: {$line-md};
+}
+.line-lg{
+  line-height: {$line-lg};
+}
+.line-xl{
+  line-height: {$line-xl};
+}
+.line-xxl{
+  line-height: {$line-xxl};
+}
+```
+
 ## To-do
 
 + [x] Optimize the classes
++ [ ] Make it easier to install
 + [ ] Test it on a real project

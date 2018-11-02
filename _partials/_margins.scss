@@ -105,16 +105,16 @@ $p: null;
 }
 
 @for $i from 0 through 10 {
-  .t-#{$i} {
+  .top-#{$i} {
     @include absolute(top, $i);
   }
-  .b-#{$i} {
+  .bottom-#{$i} {
     @include absolute(bottom, $i);
   }
-  .l-#{$i} {
+  .left-#{$i} {
     @include absolute(left, $i);
   }
-  .r-#{$i} {
+  .right-#{$i} {
     @include absolute(right, $i);
   }
 }
