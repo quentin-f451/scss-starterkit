@@ -1,1 +1,16 @@
 // GLOBAL SCSS
+
+// IMPORT LIBRARIES
+@import "_lib/normalize"; // Normalize.css - CSS Reset
+
+//IMPORT CONFIG
+@import "config"; // Initial values
+
+// IMPORT PARTIALS
+@import "_partials/_fonts"; // Initiate fonts
+@import "_partials/_grid"; // Initiate grid
+@import "_partials/_mediaqueries"; // Initiate mediaqueries
+@import "_partials/_type"; // Initiate type
+
+// IMPORT MODULES
+@import "_modules/menu";
