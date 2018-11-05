@@ -70,25 +70,25 @@ $p: null;
 
 @for $i from 0 through 10 {
   .padding-#{$i} {
-    @include margin(all, $i);
+    @include padding(all, $i);
   }
   .padding-t-#{$i} {
-    @include margin(top, $i);
+    @include padding(top, $i);
   }
   .padding-b-#{$i} {
-    @include margin(bottom, $i);
+    @include padding(bottom, $i);
   }
   .padding-l-#{$i} {
-    @include margin(left, $i);
+    @include padding(left, $i);
   }
   .padding-r-#{$i} {
-    @include margin(right, $i);
+    @include padding(right, $i);
   }
   .padding-x-#{$i} {
-    @include margin(horizontal, $i);
+    @include padding(horizontal, $i);
   }
   .padding-y-#{$i} {
-    @include margin(vertical, $i);
+    @include padding(vertical, $i);
   }
 }
 
