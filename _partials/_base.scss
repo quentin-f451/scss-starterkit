@@ -159,7 +159,7 @@ img {
 
 @for $i from 0 through 10 {
   .width-#{$i} {
-    width: $i * 10 + %;
+    width: $i * 10 + '%';
   }
 }
 
@@ -167,7 +167,7 @@ img {
 
 @for $i from 0 through 10 {
   .height-#{$i} {
-    height: $i * 10 + %;
+    height: $i * 10 + '%';
   }
 }
 
