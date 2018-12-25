@@ -5,15 +5,15 @@
 $single-column: 100 / $number-of-columns;
 
 @mixin column($property) {
-  width: $single-column * $property + '%';
+  width: percentage($single-column * $property / 100);
 }
 
 @mixin subdivision($property) {
-  width: 100 / $property + '%';
+  width: percentage($property);
 }
 
 @mixin offsetcol($property) {
-  margin-left: $single-column * $property + '%';
+  margin-left: percentage($single-column * $property / 100);
 }
 
 [class*="col-"], [class*="sub-"], [class*="off-"] {
