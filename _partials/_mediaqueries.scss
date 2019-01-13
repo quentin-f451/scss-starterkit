@@ -1,30 +1,43 @@
-$screen-sm-min: 576px;
-$screen-md-min: 768px;
-$screen-lg-min: 992px;
-$screen-xl-min: 1200px;
-
 // SCREEN SIZES - Breakpoints for mediaqueries
 
+@mixin from($device-width) {
+    @media screen and (min-width: $device-width) {
+        @content;
+    }
+}
+
+@mixin xs {
+    @include from($screen-xs) {
+        @content;
+    }
+}
+
 @mixin sm {
-   @media (min-width: #{$screen-sm-min}) {
-       @content;
-   }
+    @include from($screen-sm) {
+        @content;
+    }
 }
 
 @mixin md {
-   @media (min-width: #{$screen-md-min}) {
-       @content;
-   }
+    @include from($screen-md) {
+        @content;
+    }
 }
 
 @mixin lg {
-   @media (min-width: #{$screen-lg-min}) {
-       @content;
-   }
+    @include from($screen-lg) {
+        @content;
+    }
 }
 
 @mixin xl {
-   @media (min-width: #{$screen-xl-min}) {
-       @content;
-   }
+    @include from($screen-xl) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @include from($screen-xxl) {
+        @content;
+    }
 }

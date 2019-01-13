@@ -83,11 +83,10 @@ $base-transition-type:                      ease-in-out;
 
 // BREAKPOINTS
 
-$screen-xxs:                                375;      // (default: 375px)
-$screen-xs:                                 480;      // (default: 480px)
-$screen-sm:                                 768;      // (default: 768px)
-$screen-md:                                 1024;     // (default: 1024px)
-$screen-lg:                                 1300;     // (default: 1300px)
+$screen-xs:                                 0;        // (default: 0px)
+$screen-sm:                                 576;      // (default: 576px)
+$screen-md:                                 1000;     // (default: 1000px)
+$screen-lg:                                 1200;     // (default: 1200px)
 $screen-xl:                                 1500;     // (default: 1500px)
 $screen-xxl:                                1800;     // (default: 1800px)
 
