@@ -2,10 +2,10 @@
 
 @mixin property($property, $values) {
 
-  $top:    if($property == 'absolute', "top", $property + "-top");
+  $top:       if($property == 'absolute', "top", $property + "-top");
   $bottom:    if($property == 'absolute', "bottom", $property + "-bottom");
-  $right:    if($property == 'absolute', "right", $property + "-right");
-  $left:    if($property == 'absolute', "left", $property + "-left");
+  $right:     if($property == 'absolute', "right", $property + "-right");
+  $left:      if($property == 'absolute', "left", $property + "-left");
 
   @if length($values) == 1 {
     #{$top}: nth($values, 1) * $base-space;
