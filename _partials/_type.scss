@@ -1,72 +1,31 @@
 // INITIATE TYPE SIZES
 
-.text-xxs, small{
+small{
   font-size: $text-xxs;
 }
 
-.text-xs, h6{
+h6{
   font-size: $text-xs;
 }
 
-.text-sm, h5{
+h5{
   font-size: $text-sm;
 }
 
-.text-md, h4{
+h4{
   font-size: $text-md;
 }
 
-.text-lg, h3{
+h3{
   font-size: $text-lg;
 }
 
-.text-xl, h2{
+h2{
   font-size: $text-xl;
 }
 
-.text-xxl, h1{
+h1{
   font-size: $text-xxl;
-}
-
-.text-l {
-  text-align: left;
-}
-
-.text-r {
-  text-align: right;
-}
-
-.text-c {
-  text-align: center;
-}
-
-.justify {
-  text-align: justify;
-  @extend .hyphen;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.lowercase {
-  text-transform: lowercase;
-}
-
-.hyphen {
-  -ms-word-break: normal;
-  word-break: normal;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-}
-
-.no-hyphen {
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  hyphens: none;
-  -ms-hyphens: none;
 }
 
 // __________________________________________________________ //
@@ -75,32 +34,4 @@
 
 h1, h2, h3, h4, h5, h6, small {
   line-height: $line-height-default;
-}
-
-.line-xxs{
-  line-height: $line-xxs;
-}
-
-.line-xs{
-  line-height: $line-xs;
-}
-
-.line-sm{
-  line-height: $line-sm;
-}
-
-.line-md{
-  line-height: $line-md;
-}
-
-.line-lg{
-  line-height: $line-lg;
-}
-
-.line-xl{
-  line-height: $line-xl;
-}
-
-.line-xxl{
-  line-height: $line-xxl;
 }

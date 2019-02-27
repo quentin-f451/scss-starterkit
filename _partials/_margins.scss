@@ -1,120 +1,44 @@
-// INITIATE MARGINS AND PADDING
+// // INITIATE MARGINS AND PADDING
 
-// MARGINS
+@mixin property($property, $values) {
 
-@mixin margin($position, $property) {
-  $m: $base-margin * $property * 1px;
-  @if $is-global-viewport-sizes == true {
-    $m: $base-margin * $property * $line-height-default * 1rem;
+  $top:    if($property == 'absolute', "top", $property + "-top");
+  $bottom:    if($property == 'absolute', "bottom", $property + "-bottom");
+  $right:    if($property == 'absolute', "right", $property + "-right");
+  $left:    if($property == 'absolute', "left", $property + "-left");
+
+  @if length($values) == 1 {
+    #{$top}: nth($values, 1) * $base-space;
+    #{$bottom}: nth($values, 1) * $base-space;
+    #{$right}: nth($values, 1) * $base-space;
+    #{$left}: nth($values, 1) * $base-space;
+  } @else if length($values) == 2 {
+    #{$top}: nth($values, 1) * $base-space;
+    #{$bottom}: nth($values, 1) * $base-space;
+    #{$right}: nth($values, 2) * $base-space;
+    #{$left}: nth($values, 2) * $base-space;
+  } @else if length($values) == 3 {
+    #{$top}: nth($values, 1) * $base-space;
+    #{$bottom}: nth($values, 3) * $base-space;
+    #{$right}: nth($values, 2) * $base-space;
+    #{$left}: nth($values, 2) * $base-space;
+  } @else if length($values) == 4 {
+    #{$top}: nth($values, 1) * $base-space;
+    #{$bottom}: nth($values, 3) * $base-space;
+    #{$right}: nth($values, 2) * $base-space;
+    #{$left}: nth($values, 4) * $base-space;
   }
-  @if $position == 'all' {
-    margin: $m;
-  } @else if $position == 'horizontal' {
-    margin-right: $m;
-    margin-left: $m;
-  } @else if $position == 'vertical' {
-    margin-top: $m;
-    margin-bottom: $m;
-  } @else {
-    margin-#{$position}: $m;
-  }
+
 }
 
-@for $i from 0 through 10 {
-  .margin-#{$i} {
-    @include margin(all, $i);
-  }
-  .margin-t-#{$i} {
-    @include margin(top, $i);
-  }
-  .margin-b-#{$i} {
-    @include margin(bottom, $i);
-  }
-  .margin-l-#{$i} {
-    @include margin(left, $i);
-  }
-  .margin-r-#{$i} {
-    @include margin(right, $i);
-  }
-  .margin-x-#{$i} {
-    @include margin(horizontal, $i);
-  }
-  .margin-y-#{$i} {
-    @include margin(vertical, $i);
-  }
+@mixin padding($values) {
+  @include property(padding, $values);
 }
 
-// __________________________________________________________ //
-
-// PADDINGS
-
-$p: null;
-
-@mixin padding($position, $property) {
-  $p: $base-padding * $property * 1px;
-  @if $is-global-viewport-sizes == true {
-    $p: $base-padding * $property * $line-height-default * 1rem;
-  }
-  @if $position == 'all' {
-    padding: $p;
-  } @else if $position == 'horizontal' {
-    padding-right: $p;
-    padding-left: $p;
-  } @else if $position == 'vertical' {
-    padding-top: $p;
-    padding-bottom: $p;
-  } @else {
-    padding-#{$position}: $p;
-  }
+@mixin margin($values) {
+  @include property(margin, $values);
 }
 
-@for $i from 0 through 10 {
-  .padding-#{$i} {
-    @include padding(all, $i);
-  }
-  .padding-t-#{$i} {
-    @include padding(top, $i);
-  }
-  .padding-b-#{$i} {
-    @include padding(bottom, $i);
-  }
-  .padding-l-#{$i} {
-    @include padding(left, $i);
-  }
-  .padding-r-#{$i} {
-    @include padding(right, $i);
-  }
-  .padding-x-#{$i} {
-    @include padding(horizontal, $i);
-  }
-  .padding-y-#{$i} {
-    @include padding(vertical, $i);
-  }
-}
-
-// __________________________________________________________ //
-
-// ABSOLUTE POSITIONING
-
-@mixin absolute($position, $property) {
-  $a: $base-absolute * $property * 1px;
-  @if $is-global-viewport-sizes == true {
-    $a: $base-absolute * $property * $line-height-default * 1rem;
-  }
-  #{$position}: $a;
-}
-
-@for $i from 0 through 10 {
-  .top-#{$i} {
-    @include absolute(top, $i);
-  }
-  .bottom-#{$i} {
-    @include absolute(bottom, $i);
-  }
-  .left-#{$i} {
-    @include absolute(left, $i);
-  }
-  .right-#{$i} {
-    @include absolute(right, $i);
-  }
+@mixin absolute($values) {
+  @include property(absolute, $values);
 }

@@ -2,36 +2,24 @@
 
 @font-face {
     font-family: $primary-font-family;
-    src: url('') format('woff'),
-         url('') format('woff2');
+    src: url($primary-font-url + '.woff') format('woff'),
+         url($primary-font-url + '.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: $secondary-font-family;
-    src: url('') format('woff'),
-         url('') format('woff2');
+    src: url($secondary-font-url + '.woff') format('woff'),
+         url($secondary-font-url + '.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: $tertiary-font-family;
-    src: url('') format('woff'),
-         url('') format('woff2');
+    src: url($tertiary-font-url + '.woff') format('woff'),
+         url($tertiary-font-url + '.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-}
-
-.font-1 {
-  font-family: $primary-font-family, $primary-fallback;
-}
-
-.font-2 {
-  font-family: $secondary-font-family, $secondary-fallback;
-}
-
-.font-3 {
-  font-family: $tertiary-font-family, $tertiary-fallback;
 }

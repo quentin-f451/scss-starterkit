@@ -8,17 +8,20 @@ html {
   box-sizing: border-box;
 }
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 * {
-margin: 0;
+  margin: 0;
 }
 
-body, html {
+body,
+html {
   -webkit-tap-highlight-color: transparent;
   height: 100%;
   margin: 0 !important;
@@ -34,36 +37,51 @@ body, html {
   @return ($target / $vw-context) * 1vw;
 }
 
-html, body {
+html,
+body {
   font-size: $text-default-px * 1px;
   line-height: $line-height-default;
   color: $text-color;
   background-color: $background-color;
   font-family: $primary-font-family, $primary-fallback;
+  overflow: hidden;
+
   @include sm {
-    @if $is-global-viewport-text == true {
+    @if $is-global-viewport-text==true {
       font-size: get-vw($text-default-px * 1px);
     }
   }
 }
 
-a {
-color: $link-color;
-text-decoration: none;
-
-	&:hover {
-	color: $hover-color;
-	text-decoration: none;
-	cursor: pointer;
-	}
-
-	&:active, &:visited, &:focus {
-    text-decoration: none;
-    color: inherit;
-	}
+main {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
 }
 
-ul, ol {
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:visited,
+  &:focus {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+ul,
+ol {
   margin: 0;
   padding: 0;
 }
@@ -78,112 +96,7 @@ img {
 
 // __________________________________________________________ //
 
-// DISPLAY
-
-.disp-b {
-  display: block;
-}
-
-.disp-ib {
-  display: inline-block;
-}
-
-.disp-f {
-  display: flex;
-}
-
-.disp-if {
-  display: inline-flex;
-}
-
-.disp-n {
-  display: none;
-}
-
-// OVERFLOW
-
-.scroll {
-  overflow: scroll;
-}
-
-.scroll-x {
-  overflow-x: scroll;
-}
-
-.scroll-y {
-  overflow-y: scroll;
-}
-
-.no-scroll {
-  overflow: hidden;
-}
-
-.no-scroll-x {
-  overflow-x: hidden;
-}
-
-.no-scroll-y {
-  overflow-y: hidden;
-}
-
-// POSITION
-
-.pos-a {
-  position: absolute;
-}
-
-.pos-r {
-  position: relative;
-}
-
-.pos-f {
-  position: fixed;
-}
-
-.pos-s {
-  position: sticky;
-}
-
-// __________________________________________________________ //
-
-// Z-INDEX
-
-@for $i from 0 through 10 {
-  .z-#{$i} {
-    z-index: $i;
-  }
-  .z-neg-#{$i} {
-    z-index: -$i;
-  }
-}
-
-// WIDTH
-
-@for $i from 0 through 10 {
-  .width-#{$i} {
-    width: $i * 10 + '%';
-  }
-}
-
-// HEIGHT
-
-@for $i from 0 through 10 {
-  .height-#{$i} {
-    height: $i * 10 + '%';
-  }
-}
-
-// __________________________________________________________ //
-
 // TRANSITIONS
 
-@mixin add-transition($transition, $speed, $animation) {
-  transition: $transition $speed $animation;
-  -moz-transition: $transition $speed $animation;
-  -webkit-transition: $transition $speed $animation;
-  -o-transition: $transition $speed $animation;
-}
+$base-transition: $base-transition-selector $base-transition-speed $base-transition-type;
 
-.base-transition {
-  @include add-transition($base-transition-selector, $base-transition-speed, $base-transition-type);
-}

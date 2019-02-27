@@ -32,10 +32,13 @@ $line-xxl:                                  3.0;      // (default: 3.0)
 // FONTS
 
 $primary-font-family:                       '';
+$primary-font-url:                          '';       // Without extension
 $primary-fallback:                          'Times New Roman', Times, serif;
 $secondary-font-family:                     '';
+$secondary-font-url:                        '';       // Without extension
 $secondary-fallback:                        Garamond, 'Hoefler Text', 'Times New Roman', Times, serif;
 $tertiary-font-family:                      '';
+$tertiary-font-url:                         '';       // Without extension
 $tertiary-fallback:                         'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 
 /*
@@ -54,9 +57,7 @@ $number-of-columns:                         12;       // Number of columns
 
 // Base margin, padding and absolute positioning size
 $is-global-viewport-sizes:                  false;    // true for sizes globally defined relatively to default line-height, false for sizes globally defined in px
-$base-margin:                               10;       // Initial margin in px or relative to default line-height (default: 10px)
-$base-padding:                              10;       // Initial padding in px or relative to default line-height (default: 10px)
-$base-absolute:                             10;       // Initial absolute positioning value in px or relative to default line-height (default: 10px)
+$base-space:                                10px;     // Initial space in px or relative to default line-height (default: 10px)
 
 // __________________________________________________________ //
 
