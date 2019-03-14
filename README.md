@@ -1,4 +1,4 @@
-# SCSS Base
+# SCSS Starterkit
 
 A modular and customizable base for SCSS compiled website, only created for my personal needs and habits.
 
