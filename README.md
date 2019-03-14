@@ -5,8 +5,8 @@ A modular and customizable base for SCSS compiled website, only created for my p
 ## Table of contents
 
 + [Usage](#usage)
-  + [If you don't use my starterkits](#usage)
-  + [If you use my starterkits]
+  + [If you don't use my starterkits](#if-you-dont-use-my-starterkits)
+  + [If you use my starterkits](#if-you-use-my-starterkits)
 + [List of variables](#list-of-variables)
 + [List of classes](#list-of-classes)
 
