@@ -43,7 +43,11 @@ body {
   line-height: $line-height-default;
   color: $text-color;
   background-color: $background-color;
-  font-family: $primary-font-family, $primary-fallback;
+  @if ($primary-font-family != '') {
+    font-family: $primary-font-family, $primary-fallback;
+  } @else {
+    font-family: $primary-fallback;
+  }
   overflow: hidden;
 
   @include sm {
