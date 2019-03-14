@@ -1,4 +1,5 @@
 # SCSS Starterkit
+[![Release](https://img.shields.io/github/release-pre/quentin-f451/scss-starterkit.svg)](https://github.com/quentin-f451/scss-starterkit/releases)
 
 A modular and customizable base for SCSS compiled website, only created for my personal needs and habits.
 
