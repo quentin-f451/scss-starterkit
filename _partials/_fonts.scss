@@ -8,6 +8,10 @@
         font-weight: normal;
         font-style: normal;
     }
+
+    .font-1 {
+        font-family: $primary-font-family, $primary-fallback;
+    }
 }
 
 @if ($secondary-font-family != '') {
@@ -18,6 +22,10 @@
         font-weight: normal;
         font-style: normal;
     }
+
+    .font-2 {
+        font-family: $secondary-font-family, $secondary-fallback;
+    }
 }
 
 @if ($tertiary-font-family != '') {
@@ -27,5 +35,9 @@
             url($tertiary-font-url + '.woff2') format('woff2');
         font-weight: normal;
         font-style: normal;
+    }
+
+    .font-3 {
+        font-family: $tertiary-font-family, $tertiary-fallback;
     }
 }
