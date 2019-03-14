@@ -4,24 +4,145 @@ A modular and customizable base for SCSS compiled website, only created for my p
 
 ## Table of contents
 
-+ [Usage](https://github.com/quentin-f451/scss-base#usage)
-+ [List of variables](https://github.com/quentin-f451/scss-base#list-of-variables)
-+ [List of classes](https://github.com/quentin-f451/scss-base#list-of-classes)
-  + [Simple, non-variable classes](https://github.com/quentin-f451/scss-base#simple-non-variable-classes)
-  + [Variable classes](https://github.com/quentin-f451/scss-base#variable-classes)
-+ [To-do](https://github.com/quentin-f451/scss-base#to-do)
++ [Usage](#usage)
+  + [If you don't use my starterkits](#usage)
+  + [If you use my starterkits]
++ [List of variables](#list-of-variables)
++ [List of classes](#list-of-classes)
 
 ## Usage
 
-Add this to any project with compiled SCSS.
+### If you don't use my starterkits 
 
-1. Fill in the `config.scss` file with your values.
-2. Add your own modules and `.scss` files in `_modules` folder.
-3. Link them at the end of the `application.scss` file
-```css
-@import "_modules/name_of_the_module.scss";
+1. Create your `scss` folder.
+2. Add this repo as a submodule 
 ```
-4. Compile
+git add submodule https://github.com/quentin-f451/scss-starterkit _base
+```
+3. Create your `config.scss` file with the following content:
+```scss
+// CONFIGURATE DOCUMENT
+
+// FONT SIZES
+
+$text-default-px:                           16;       // Default font-size in px (default: 16px)
+$line-height-default:                       1.25;     // Default line-height, relative to default font-size (default: 1.25)
+
+// Viewport values
+$is-global-viewport-text:                   true;     // true for font-size globally defined in vw, false for font-size globally defined in px
+$viewport-width-px:                         1280;     // Screen size used for calculating font-size in vw (like http://emilolsson.com/tools/vw-unit-calc-an-online-responsive-css-font-size-calculator/)
+
+// Font sizes - can be any unit
+$text-xxs:                                  0.5rem;   // (default: 0.5rem)  -- small
+$text-xs:                                   0.75rem;  // (default: 0.75rem) -- h6
+$text-sm:                                   1.0rem;   // (default: 1.0rem)  -- h5
+$text-md:                                   1.5rem;   // (default: 1.5rem)  -- h4
+$text-lg:                                   2.0rem;   // (default: 2.0rem)  -- h3
+$text-xl:                                   3.0rem;   // (default: 3.0rem)  -- h2
+$text-xxl:                                  6.0rem;   // (default: 6.0rem)  -- h1
+
+// Line height - realtive to font-size
+$line-xxs:                                  1.0;      // (default: 1.0)
+$line-xs:                                   1.125;    // (default: 1.125)
+$line-sm:                                   1.25;     // (default: 1.25)
+$line-md:                                   1.375;    // (default: 1.375)
+$line-lg:                                   1.5;      // (default: 1.5)
+$line-xl:                                   2.0;      // (default: 2.0)
+$line-xxl:                                  3.0;      // (default: 3.0)
+
+// __________________________________________________________ //
+
+// FONTS
+
+$primary-font-family:                       '';
+$primary-font-url:                          '';       // Without extension
+$primary-fallback:                          'Times New Roman', Times, serif;
+$secondary-font-family:                     '';
+$secondary-font-url:                        '';       // Without extension
+$secondary-fallback:                        Garamond, 'Hoefler Text', 'Times New Roman', Times, serif;
+$tertiary-font-family:                      '';
+$tertiary-font-url:                         '';       // Without extension
+$tertiary-fallback:                         'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+/*
+Fallbacks examples
+ - 'Times New Roman', Times, serif
+ - Garamond, 'Hoefler Text', 'Times New Roman', Times, serif
+ - 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif
+ - 'Courier New', Courier, monospace
+*/
+
+// __________________________________________________________ //
+
+// LAYOUT
+
+$number-of-columns:                         12;       // Number of columns
+
+// Base space
+$base-space:                                10px;     // Initial space in px (default: 10px)
+
+// __________________________________________________________ //
+
+// COLORS
+
+$text-color:                                black;    // Text color
+$link-color:                                blue;     // Link color
+$hover-color:                               red;      // Hover color
+
+$primary-color:                             black;    // Color 1
+$secondary-color:                           black;    // Color 2
+$tertiary-color:                            black;    // Color 3
+$background-color:                          white;    // Background color
+
+// __________________________________________________________ //
+
+// TRANSITION
+
+$base-transition-selector:                  all;
+$base-transition-speed:                     .3s;
+$base-transition-type:                      ease-in-out;
+
+// __________________________________________________________ //
+
+// BREAKPOINTS
+
+$screen-xs:                                 0px;        // (default: 0px)
+$screen-sm:                                 576px;      // (default: 576px)
+$screen-md:                                 1000px;     // (default: 1000px)
+$screen-lg:                                 1200px;     // (default: 1200px)
+$screen-xl:                                 1500px;     // (default: 1500px)
+$screen-xxl:                                1800px;     // (default: 1800px)
+
+// __________________________________________________________ //
+
+// FREE CONFIG
+```
+
+4. Create your `application.scss` file with the following content:
+```scss
+// GLOBAL SCSS
+
+// IMPORT LIBRARIES
+@import "_base/_lib/_normalize.scss";     // Normalize.css - CSS Reset
+
+//IMPORT CONFIG
+@import "config";                   // Initial values
+
+// IMPORT PARTIALS
+@import "_base/_partials/_mediaqueries";  // Initiate mediaqueries
+@import "_base/_partials/_base";          // Initiate basic elements
+@import "_base/_partials/_fonts";         // Initiate fonts
+@import "_base/_partials/_grid";          // Initiate grid
+@import "_base/_partials/_margins";       // Initiate margins and padding
+@import "_base/_partials/_type";          // Initiate type
+
+// IMPORT MODULES
+// Add here the scss files for the website
+```
+
+### If you use my starterkits 
+
+1. Simply change the values of the `config.scss` file.
 
 ## List of variables
 
@@ -60,21 +181,19 @@ The default line height are set *unitless*, relative to text. See [here](https:/
 
 Fonts need to be linked in the `_partials/_fonts.scss` file. Their name will be the one you choose in the variables.
 + `$primary-font-family` Primary font (applied by default to `html, body`) — No default value, it can be any name.
++ `$primary-font-url` Primary font URL.
 + `$primary-fallback` Primary fallback font (applied by default to `html, body`) — No default value, it can be any name.
 + `$secondary-font-family` Secondary font — No default value, it can be any name.
++ `$secondary-font-url` Secondary font URL.
 + `$secondary-fallback` Secondary fallback font — No default value, it can be any name.
 + `$tertiary-font-family` Tertiary font — No default value, it can be any name.
++ `$tertiary-font-url` Tertiary font URL.
 + `$tertiary-fallback` Tertiary fallback font — No default value, it can be any name.
 
 ### Default layout values
 
 + `$number-of-columns` Number of **columns** that divide the width of the container. It can be applied at any level in the code. — Default: `12`
-+ `$is-global-viewport-sizes` `true` or `false`. `true` will define `$base-margin`, `$base-padding` and `$base-absolute` in `unitless` values relatively to `$line-height-default`, `false` will define `$base-margin`, `$base-padding` and `$base-absolute` in `px` values. - Default: `false`
-
-If `$is-global-viewport-sizes` is set to `true`, the three following variables are `unitless`. If `$is-global-viewport-sizes` is set to `false`, the three following variables are in `px`.
-+ `$base-margin` Default **margin** value *in px* or *unitless*. - Default: `10`
-+ `$base-padding` Default **padding** value *in px* or *unitless*. - Default: `10`
-+ `$base-absolute` Default **absolute positioning** value (`top`, `bottom`, `right` and `left`) *in px* or *unitless*. - Default: `10`
++ `$base-space` Default **space** value *in px*. - Default: `10px`
 
 ### Default color values
 
@@ -97,127 +216,18 @@ The default values for globally set **transitions**.
 ### Default breakpoint values
 
 The default values for responsive **breakpoints** *in px*.
-+ `$screen-xxs` XXtra Small minimum screen width — Default: `375`
-+ `$screen-xs` Xtra Small minimum screen width — Default: `480`
-+ `$screen-sm` Small minimum screen width — Default: `768`
-+ `$screen-md` Medium minimum screen width — Default: `1024`
-+ `$screen-lg` Large minimum screen width — Default: `1300`
-+ `$screen-xl` Xtra Large minimum screen width — Default: `1500`
-+ `$screen-xxl` XXtra Large minimum screen width — Default: `1800`
++ `$screen-xs` Xtra Small minimum screen width — Default: `0px`
++ `$screen-sm` Small minimum screen width — Default: `576px`
++ `$screen-md` Medium minimum screen width — Default: `1000px`
++ `$screen-lg` Large minimum screen width — Default: `1200px`
++ `$screen-xl` Xtra Large minimum screen width — Default: `1500px`
++ `$screen-xxl` XXtra Large minimum screen width — Default: `1800px`
 
 ## List of classes
 
-+ Simple, non-variable classes: [Text](https://github.com/quentin-f451/scss-base/tree/master#text), [Display](https://github.com/quentin-f451/scss-base/tree/master#display), [Overflow](https://github.com/quentin-f451/scss-base/tree/master#overflow), [Position](https://github.com/quentin-f451/scss-base/tree/master#position)
-+ Variable classes: [Column layout](https://github.com/quentin-f451/scss-base#column-layout), [Margins, paddings, positioning](https://github.com/quentin-f451/scss-base#margins-paddings-positioning), [Colors](https://github.com/quentin-f451/scss-base#colors), [Z-Index](https://github.com/quentin-f451/scss-base#z-index), [Height and width](https://github.com/quentin-f451/scss-base#height-and-width), [Transition](https://github.com/quentin-f451/scss-base#transition), [Fonts](https://github.com/quentin-f451/scss-base#fonts), [Typesetting](https://github.com/quentin-f451/scss-base#typesetting)
+[Column layout](https://github.com/quentin-f451/scss-base#column-layout), [Margins, paddings, positioning](https://github.com/quentin-f451/scss-base#margins-paddings-positioning), [Fonts](https://github.com/quentin-f451/scss-base#fonts)
 
-### Simple, non-variable classes
-
-#### Text
-
-```css
-.text-l {
-  text-align: left;
-}
-.text-r {
-  text-align: right;
-}
-.text-c {
-  text-align: center;
-}
-.justify {
-  text-align: justify;
-  -ms-word-break: normal;
-  word-break: normal;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-}
-.uppercase {
-  text-transform: uppercase;
-}
-.lowercase {
-  text-transform: lowercase;
-}
-.hyphen {
-  -ms-word-break: normal;
-  word-break: normal;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-}
-.no-hyphen {
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  hyphens: none;
-  -ms-hyphens: none;
-}
-```
-
-#### Display
-
-```css
-.disp-b {
-  display: block;
-}
-.disp-ib {
-  display: inline-block;
-}
-.disp-f {
-  display: flex;
-}
-.disp-if {
-  display: inline-flex;
-}
-.disp-n {
-  display: none;
-}
-```
-
-#### Overflow
-
-```css
-.scroll {
-  overflow: scroll;
-}
-.scroll-x {
-  overflow-x: scroll;
-}
-.scroll-y {
-  overflow-y: scroll;
-}
-.no-scroll {
-  overflow: hidden;
-}
-.no-scroll-x {
-  overflow-x: hidden;
-}
-.no-scroll-y {
-  overflow-y: hidden;
-}
-```
-
-#### Position
-
-```css
-.pos-a {
-  position: absolute;
-}
-.pos-r {
-  position: relative;
-}
-.pos-f {
-  position: fixed;
-}
-.pos-s {
-  position: sticky;
-}
-```
-
-### Variable classes
-
-#### Column layout
+### Column layout
 
 Depending on the number of columns set at `$number-of-columns`, three types of classes allow to work on column layouts.
 `.col-` to specify the width of a `div` with a number of columns. `.sub-` to specify a subdivision by a certain number. `.off-` to specify a `margin-left` value with a number of columns.
@@ -248,187 +258,39 @@ Depending on the number of columns set at `$number-of-columns`, three types of c
 }
 ```
 
-#### Margins, paddings, positioning
+### Margins, paddings, positioning
 
-Depending on the value of the variables `$is-global-viewport-sizes`, `$base-margin`, `$base-padding` and `$base-absolute`. With `{number}` between `0` and `10`.
-
-```css
-.margin-{number} {
-  margin: 1px * {$base-margin} * {number};
-}
-.margin-t-{number} {
-  margin-top: 1px * {$base-margin} * {number};
-}
-.margin-r-{number} {
-  margin-right: 1px * {$base-margin} * {number};
-}
-.margin-b-{number} {
-  margin-bottom: 1px * {$base-margin} * {number};
-}
-.margin-l-{number} {
-  margin-left: 1px * {$base-margin} * {number};
-}
-.margin-x-{number} {
-  margin-right: 1px * {$base-margin} * {number};
-  margin-left: 1px * {$base-margin} * {number};
-}
-.margin-y-{number} {
-  margin-top: 1px * {$base-margin} * {number};
-  margin-bottom: 1px * {$base-margin} * {number};
-}
-.padding-{number} {
-  padding: 1px * {$base-padding} * {number};
-}
-.padding-t-{number} {
-  padding-top: 1px * {$base-padding} * {number};
-}
-.padding-r-{number} {
-  padding-right: 1px * {$base-padding} * {number};
-}
-.padding-b-{number} {
-  padding-bottom: 1px * {$base-padding} * {number};
-}
-.padding-l-{number} {
-  padding-left: 1px * {$base-padding} * {number};
-}
-.padding-x-{number} {
-  padding-right: 1px * {$base-padding} * {number};
-  padding-left: 1px * {$base-padding} * {number};
-}
-.padding-y-{number} {
-  padding-top: 1px * {$base-padding} * {number};
-  padding-bottom: 1px * {$base-padding} * {number};
-}
-.top-{number} {
-  top: 1px * {$base-padding} * {number};
-}
-.right-{number} {
-  right: 1px * {$base-padding} * {number};
-}
-.bottom-{number} {
-  bottom: 1px * {$base-padding} * {number};
-}
-.left-{number} {
-  left: 1px * {$base-padding} * {number};
-}
-```
-
-For example, for `$base-margin: 10`:
+Depending on the value of the variables `$base-space`.
 
 ```css
-.margin-4 {
-  margin: 40px;
-}
-.margin-x-8 {
-  margin-top: 80px;
-  margin-bottom: 80px;
-}
+@include margin({number});
+@include absolute({number});
+@include padding({number});
 ```
 
-If `$is-global-viewport-sizes` is set to `true`, the formula to get the margin will change from `1px * {$base-padding} * {number}` to `1rem * {$line-height-default} * {$base-padding} * {number}`. For example, for `$base-padding: 1` and `$line-height-default: 1.25`:
+For example, for `$base-space: 10`, it will be compiled as:
 
 ```css
-.padding-3 {
-  padding: 3.75rem;
-}
-.padding-r-6 {
-  padding-right: 7.5rem;
-}
+@include margin(2);
+margin-top: 20px;
+margin-right: 20px;
+margin-bottom: 20px;
+margin-left: 20px;
+
+@include absolute(2 1);
+top: 20px;
+right: 10px;
+bottom: 20px;
+left: 10px;
+
+@include padding(2 1 5 7);
+padding-top: 20px;
+padding-right: 10px;
+padding-bottom: 50px;
+padding-left: 70px;
 ```
 
-#### Colors
-
-Depending on the value of the variables `$text-color`, `$primary-color`, `$secondary-color`, `$tertiary-color` and `$background-color`.
-
-```css
-.text-color {
-  color: {$text-color};
-}
-.background-color {
-  background-color: {$background-color};
-}
-.color-1 {
-  color: {$primary-color};
-}
-.color-2 {
-  color: {$secondary-color};
-}
-.color-3 {
-  color: {$tertiary-color};
-}
-.bg-color-1 {
-  background-color: {$primary-color};
-}
-.bg-color-2 {
-  background-color: {$secondary-color};
-}
-.bg-color-3 {
-  background-color: {$tertiary-color};
-}
-```
-
-#### Z-Index
-
-With `{number}` between `0` and `10`.
-
-```css
-.z-{number} {
-  z-index: {number};
-}
-.z-neg-{number} {
-  z-index: -{number};
-}
-```
-
-For example:
-
-```css
-.z-8 {
-  z-index: 8;
-}
-.z-neg-5 {
-  z-index: -5;
-}
-```
-
-#### Height and width
-
-With `{number}` between `0` and `10`.
-
-```css
-.width-{number} {
-  width: {number} * 10%;
-}
-.height-{number} {
-  height: {number} * 10%;
-}
-```
-
-For example:
-
-```css
-.width-4 {
-  width: 40%;
-}
-.height-8 {
-  height: 80%;
-}
-```
-
-#### Transition
-
-Depending on the value of the variables `$base-transition-selector`, `$base-transition-speed` and `$base-transition-type`.
-
-```css
-.base-transition {
-  transition: {$base-transition-selector} {$base-transition-speed} {$base-transition-type};
-  -moz-transition: {$base-transition-selector} {$base-transition-speed} {$base-transition-type};
-  -webkit-transition: {$base-transition-selector} {$base-transition-speed} {$base-transition-type};
-  -o-transition: {$base-transition-selector} {$base-transition-speed} {$base-transition-type};
-}
-```
-
-#### Fonts
+### Fonts
 
 Depending on the value of the variables `$primary-font-family`, `$secondary-font-family`, `$tertiary-font-family`, `$primary-fallback`, `$secondary-fallback` and `$tertiary-fallback`.
 
@@ -442,59 +304,4 @@ Depending on the value of the variables `$primary-font-family`, `$secondary-font
 .font-3 {
   font-family: {$tertiary-font-family}, {$tertiary-fallback};
 }
-```
-
-#### Typesetting
-
-Depending on the value of the `$text-` and `$line-` kinds of variables.
-
-```css
-.text-xxs{
-  font-size: {$text-xxs};
-}
-.text-xs{
-  font-size: {$text-xs};
-}
-.text-sm{
-  font-size: {$text-sm};
-}
-.text-md{
-  font-size: {$text-md};
-}
-.text-lg{
-  font-size: {$text-lg};
-}
-.text-xl{
-  font-size: {$text-xl};
-}
-.text-xxl{
-  font-size: {$text-xxl};
-}
-.line-xxs{
-  line-height: {$line-xxs};
-}
-.line-xs{
-  line-height: {$line-xs};
-}
-.line-sm{
-  line-height: {$line-sm};
-}
-.line-md{
-  line-height: {$line-md};
-}
-.line-lg{
-  line-height: {$line-lg};
-}
-.line-xl{
-  line-height: {$line-xl};
-}
-.line-xxl{
-  line-height: {$line-xxl};
-}
-```
-
-## To-do
-
-+ [x] Optimize the classes
-+ [ ] Make it easier to install
-+ [ ] Test it on a real project
+``
