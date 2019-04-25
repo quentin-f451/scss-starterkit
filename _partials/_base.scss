@@ -75,13 +75,6 @@ a {
     text-decoration: none;
     cursor: pointer;
   }
-
-  &:active,
-  &:visited,
-  &:focus {
-    text-decoration: none;
-    color: inherit;
-  }
 }
 
 ul,
@@ -103,4 +96,8 @@ img {
 // TRANSITIONS
 
 $base-transition: $base-transition-selector $base-transition-speed $base-transition-type;
+
+.transition {
+  transition: $base-transition;
+}
 
