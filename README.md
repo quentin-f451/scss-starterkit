@@ -18,7 +18,7 @@ A modular and customizable base for SCSS compiled website, only created for my p
 1. Create your `scss` folder.
 2. Add this repo as a submodule 
 ```
-git add submodule https://github.com/quentin-f451/scss-starterkit _base
+git submodule add https://github.com/quentin-f451/scss-starterkit.git _base
 ```
 3. Create your `config.scss` file with the following content:
 ```scss
