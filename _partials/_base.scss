@@ -48,22 +48,12 @@ body {
   } @else {
     font-family: $primary-fallback;
   }
-  overflow: hidden;
 
   @include sm {
     @if $is-global-viewport-text==true {
       font-size: get-vw($text-default-px * 1px);
     }
   }
-}
-
-main {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  z-index: 1;
 }
 
 a {
@@ -100,4 +90,3 @@ $base-transition: $base-transition-selector $base-transition-speed $base-transit
 .transition {
   transition: $base-transition;
 }
-
