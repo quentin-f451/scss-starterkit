@@ -15,11 +15,11 @@ A modular and customizable base for SCSS compiled website, only created for my p
 
 ### If you don't use my starterkits 
 
-1. Create your `scss` folder.
-2. Clone this repo
+1. Clone this repo
 ```
-git clone https://github.com/quentin-f451/scss-starterkit.git _base
+git clone https://github.com/quentin-f451/scss-starterkit.git scss
 ```
+2. Change the values of the `config.scss` file.
 
 ### If you use my starterkits 
 
