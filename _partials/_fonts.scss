@@ -4,9 +4,9 @@
   @if (map-get($font-properties, url) != '') {
     @font-face {
       font-family: map-get($font-properties, name);
-      src: url('../fonts/'+map-get($font-properties, name)+'.woff')
+      src: url(map-get($font-properties, name)+'.woff')
           format('woff'),
-        url('../fonts/'+map-get($font-properties, name)+'.woff2')
+        url(map-get($font-properties, name)+'.woff2')
           format('woff2');
       font-weight: map-get($font-properties, weight);
       font-style: map-get($font-properties, style);
