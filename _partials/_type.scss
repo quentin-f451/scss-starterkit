@@ -1,38 +1,72 @@
 // INITIATE TYPE SIZES
 
-small{
-  font-size: $text-xxs;
+small {
+  font-size: text(xxs, sm);
+
+  @include mq(sm) {
+    font-size: text(xxs, default);
+  }
 }
 
-h6{
-  font-size: $text-xs;
+h6 {
+  font-size: text(xs, sm);
+
+  @include mq(sm) {
+    font-size: text(xs, default);
+  }
 }
 
-h5{
-  font-size: $text-sm;
+h5 {
+  font-size: text(sm, sm);
+
+  @include mq(sm) {
+    font-size: text(sm, default);
+  }
 }
 
-h4{
-  font-size: $text-md;
+h4 {
+  font-size: text(md, sm);
+
+  @include mq(sm) {
+    font-size: text(md, default);
+  }
 }
 
-h3{
-  font-size: $text-lg;
+h3 {
+  font-size: text(lg, sm);
+
+  @include mq(sm) {
+    font-size: text(lg, default);
+  }
 }
 
-h2{
-  font-size: $text-xl;
+h2 {
+  font-size: text(xl, sm);
+
+  @include mq(sm) {
+    font-size: text(xl, default);
+  }
 }
 
-h1{
-  font-size: $text-xxl;
+h1 {
+  font-size: text(xxl, sm);
+
+  @include mq(sm) {
+    font-size: text(xxl, default);
+  }
 }
 
 // __________________________________________________________ //
 
 // INITIATE LINE HEIGHT
 
-h1, h2, h3, h4, h5, h6, small {
-  line-height: $line-height-default;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+  line-height: line(default);
   font-weight: normal;
 }

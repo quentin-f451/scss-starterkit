@@ -1,43 +1,10 @@
 // SCREEN SIZES - Breakpoints for mediaqueries
 
-@mixin from($device-width) {
-    @media screen and (min-width: $device-width) {
-        @content;
-    }
-}
-
-@mixin xs {
-    @include from($screen-xs) {
-        @content;
-    }
-}
-
-@mixin sm {
-    @include from($screen-sm) {
-        @content;
-    }
-}
-
-@mixin md {
-    @include from($screen-md) {
-        @content;
-    }
-}
-
-@mixin lg {
-    @include from($screen-lg) {
-        @content;
-    }
-}
-
-@mixin xl {
-    @include from($screen-xl) {
-        @content;
-    }
-}
-
-@mixin xxl {
-    @include from($screen-xxl) {
-        @content;
-    }
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
 }

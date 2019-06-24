@@ -1,43 +1,19 @@
 // INITIATE FONTS
 
-@if ($primary-font-family != '') {
-    @font-face {
-        font-family: $primary-font-family;
-        src: url($primary-font-url + '.woff') format('woff'),
-            url($primary-font-url + '.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    .font-1 {
-        font-family: $primary-font-family, $primary-fallback;
-    }
+@each $i, $font-properties in $fonts {
+  @font-face {
+    font-family: map-get($font-properties, name);
+    src: url('../fonts/'+map-get($font-properties, name)+'.woff') format('woff'),
+      url('../fonts/'+map-get($font-properties, name)+'.woff2') format('woff2');
+    font-weight: map-get($font-properties, weight);
+    font-style: map-get($font-properties, style);
+    font-display: map-get($font-properties, display);
+  }
 }
 
-@if ($secondary-font-family != '') {
-    @font-face {
-        font-family: $secondary-font-family;
-        src: url($secondary-font-url + '.woff') format('woff'),
-            url($secondary-font-url + '.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    .font-2 {
-        font-family: $secondary-font-family, $secondary-fallback;
-    }
-}
-
-@if ($tertiary-font-family != '') {
-    @font-face {
-        font-family: $tertiary-font-family;
-        src: url($tertiary-font-url + '.woff') format('woff'),
-            url($tertiary-font-url + '.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    .font-3 {
-        font-family: $tertiary-font-family, $tertiary-fallback;
-    }
+@each $i, $font-properties in $fonts {
+  .font-#{$i} {
+    font-family: map-get($font-properties, name),
+      unquote(map-get($font-properties, fallback));
+  }
 }

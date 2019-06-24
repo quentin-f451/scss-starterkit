@@ -4,6 +4,4 @@ package-lock.json
 index.html
 style.css
 style.min.css
-config.scss
-application.scss
 .DS_Store

@@ -9,15 +9,17 @@ $single-column: 100 / $number-of-columns;
 }
 
 @mixin subdivision($property) {
-  width: percentage($property);
+  width: percentage(100 / $property) / 100;
 }
 
 @mixin offsetcol($property) {
   margin-left: percentage($single-column * $property / 100);
 }
 
-[class*="col-"], [class*="sub-"], [class*="off-"] {
-    float: left;
+[class*='col-'],
+[class*='sub-'],
+[class*='off-'] {
+  float: left;
 }
 
 @for $i from 1 through $number-of-columns {
