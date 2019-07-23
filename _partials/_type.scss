@@ -1,6 +1,24 @@
 // INITIATE TYPE SIZES
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+.small {
   font-size: text(xxs, sm);
 
   @include mq(sm) {
@@ -8,7 +26,7 @@ small {
   }
 }
 
-h6 {
+.h6 {
   font-size: text(xs, sm);
 
   @include mq(sm) {
@@ -16,7 +34,7 @@ h6 {
   }
 }
 
-h5 {
+.h5 {
   font-size: text(sm, sm);
 
   @include mq(sm) {
@@ -24,7 +42,7 @@ h5 {
   }
 }
 
-h4 {
+.h4 {
   font-size: text(md, sm);
 
   @include mq(sm) {
@@ -32,7 +50,7 @@ h4 {
   }
 }
 
-h3 {
+.h3 {
   font-size: text(lg, sm);
 
   @include mq(sm) {
@@ -40,7 +58,7 @@ h3 {
   }
 }
 
-h2 {
+.h2 {
   font-size: text(xl, sm);
 
   @include mq(sm) {
@@ -48,7 +66,7 @@ h2 {
   }
 }
 
-h1 {
+.h1 {
   font-size: text(xxl, sm);
 
   @include mq(sm) {
@@ -60,13 +78,13 @@ h1 {
 
 // INITIATE LINE HEIGHT
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-small {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.small {
   line-height: line(default);
   font-weight: normal;
 }
