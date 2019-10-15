@@ -4,65 +4,64 @@
 
 // Font sizes - can be any unit
 $texts: (
-  default: (                                // Default font-sizes in px
+  default: (
     default: 16px,
     sm: 16px,
   ),
-  xxs: (                                    // small
-    default: 0.5rem,                        // (default: 0.5rem)
-    sm: 0.5rem,                             // (default: 0.5rem)
+  xxs: (
+    default: 0.5rem,
+    sm: 0.5rem,
   ),
-  xs: (                                     // h6
-    default: 0.75rem,                       // (default: 0.75rem)
-    sm: 0.75rem                             // (default: 0.75rem)
+  xs: (
+    default: 0.75rem,
+    sm: 0.75rem,
   ),
-  sm: (                                     // h5
-    default: 1.0rem,                        // (default: 1.0rem)
-    sm: 1.0rem                              // (default: 1.0rem)
+  sm: (
+    default: 1rem,
+    sm: 1rem,
   ),
-  md: (                                     // h4
-    default: 1.5rem,                        // (default: 1.5rem)
-    sm: 1.5rem                              // (default: 1.5rem)
+  md: (
+    default: 1.5rem,
+    sm: 1.5rem,
   ),
-  lg: (                                     // h3
-    default: 2.0rem,                        // (default: 2.0rem)
-    sm: 2.0rem                              // (default: 2.0rem)
+  lg: (
+    default: 2rem,
+    sm: 2rem,
   ),
-  xl: (                                     // h2
-    default: 3.0rem,                        // (default: 3.0rem)
-    sm: 3.0rem                              // (default: 3.0rem)
+  xl: (
+    default: 3rem,
+    sm: 3rem,
   ),
-  xxl: (                                    // h1
-    default: 6.0rem,                        // (default: 6.0rem)
-    sm: 6.0rem                              // (default: 6.0rem)
-  )
+  xxl: (
+    default: 6rem,
+    sm: 6rem,
+  ),
 );
 
 // Line height - realtive to font-size
 $lines: (
-  default: 1.25,                            // Default line-height, relative to default font-size (default: 1.25)
-  xxs: 1.0,                                 // (default: 1.0)
-  xs: 1.125,                                // (default: 1.125)
-  sm: 1.25,                                 // (default: 1.25)
-  md: 1.375,                                // (default: 1.375)
-  lg: 1.5,                                  // (default: 1.5)
-  xl: 2.0,                                  // (default: 2.0)
-  xxl: 3.0,                                 // (default: 3.0)
+  default: 1.25,
+  xxs: 1,
+  xs: 1.125,
+  sm: 1.25,
+  md: 1.375,
+  lg: 1.5,
+  xl: 2,
+  xxl: 3,
 );
 
-$font-smoothing-moz:                        true;     // Font smoothing in Firefox (default: true)
-$font-smoothing-webkit:                     true;     // Font smoothing in Chrome/Safari (default: true)
+$font-smoothing-moz: true;
+$font-smoothing-webkit: true;
 
 // Viewport values
-$is-global-viewport-text:                   true;     // true for font-size globally defined in vw, false for font-size globally defined in px
-$viewport-width-px:                         1280;     // Screen size used for calculating font-size in vw (like http://emilolsson.com/tools/vw-unit-calc-an-online-responsive-css-font-size-calculator/)
-
+$is-global-viewport-text: true;
+$viewport-width-px: 1280;
 
 // __________________________________________________________ //
 
 // FONTS
 
-$main-font: 1; 
+$main-font: 1;
 $fonts: (
   1: (
     name: Helvetica,
@@ -70,30 +69,26 @@ $fonts: (
     url: '',
     weight: normal,
     style: normal,
-    display: auto
+    display: auto,
   ),
-
   2: (
     name: Times,
     fallback: 'Times New Roman, Times, serif',
     url: '',
     weight: normal,
     style: normal,
-    display: auto
-  )
+    display: auto,
+  ),
 );
-
 
 // __________________________________________________________ //
 
 // LAYOUT
 
-$number-of-columns:                         12;       // Number of columns
+$number-of-columns: 12;
 
-// Base margin, padding and absolute positioning size
-$is-global-viewport-sizes:                  false;    // true for sizes globally defined relatively to default line-height, false for sizes globally defined in px
-$base-space:                                10px;     // Initial space in px or relative to default line-height (default: 10px)
-
+$is-global-viewport-sizes: false;
+$base-space: 10px;
 
 // __________________________________________________________ //
 
@@ -103,19 +98,17 @@ $colors: (
   text: black,
   link: blue,
   hover: red,
-  background: white
+  background: white,
 );
-
 
 // __________________________________________________________ //
 
 // TRANSITION
 
-$transition-property-default:               all;
-$transition-duration-default:               .3s;
-$transition-timing-default:                 ease-in-out;
-$transition-delay-default:                  0s;
-
+$transition-property-default: all;
+$transition-duration-default: 0.3s;
+$transition-timing-default: ease-in-out;
+$transition-delay-default: 0s;
 
 // __________________________________________________________ //
 
@@ -127,7 +120,7 @@ $breakpoints: (
   md: 1000px,
   lg: 1200px,
   xl: 1500px,
-  xxl: 1800px
+  xxl: 1800px,
 );
 
 // __________________________________________________________ //

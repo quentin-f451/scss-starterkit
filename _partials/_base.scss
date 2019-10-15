@@ -12,7 +12,6 @@
   @return map-get($colors, $type);
 }
 
-
 // BORDER-BOX, RESET
 
 html {
@@ -106,10 +105,10 @@ img {
   width: 100%;
 }
 
-strong, b {
+strong,
+b {
   font-weight: normal;
 }
-
 
 // __________________________________________________________ //
 
@@ -129,117 +128,4 @@ strong, b {
 
 .transition {
   @include transition;
-}
-
-// DISPLAYS
-
-.df {
-  display: flex;
-}
-
-.db {
-  display: block;
-}
-
-.dib {
-  display: inline-block;
-}
-
-.di {
-  display: inline;
-}
-
-.dt {
-  display: table;
-}
-
-.dtc {
-  display: table-cell;
-}
-
-.dtr {
-  display: table-row;
-}
-
-.dn {
-  display: none;
-}
-
-
-// FLOAT
-
-.fl {
-  float: left;
-}
-
-.fr {
-  float: right;
-}
-
-.fn {
-  float: none;
-}
-
-.cf:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-
-// OVERFLOW
-
-.oh {
-  overflow: hidden;
-}
-
-.os {
-  overflow: scroll;
-}
-
-.ov {
-  overflow: visible;
-}
-
-.oxh {
-  overflow-x: hidden;
-}
-
-.oxs {
-  overflow-x: scroll;
-}
-
-.oxv {
-  overflow-x: visible;
-}
-
-.oyh {
-  overflow-y: hidden;
-}
-
-.oys {
-  overflow-y: scroll;
-}
-
-.oyv {
-  overflow-y: visible;
-}
-
-
-// POSITION
-
-.psa {
-  position: absolute;
-}
-
-.psr {
-  position: relative;
-}
-
-.psf {
-  position: fixed;
-}
-
-.pss {
-  position: sticky;
 }

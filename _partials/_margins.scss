@@ -1,10 +1,10 @@
 // // INITIATE MARGINS AND PADDING
 
 @mixin property($property, $values) {
-  $top: if($property == 'absolute', 'top', $property + '-top');
-  $bottom: if($property == 'absolute', 'bottom', $property + '-bottom');
-  $right: if($property == 'absolute', 'right', $property + '-right');
-  $left: if($property == 'absolute', 'left', $property + '-left');
+  $top: $property + '-top';
+  $bottom: $property + '-bottom';
+  $right: $property + '-right';
+  $left: $property + '-left';
 
   @if length($values) == 1 {
     #{$top}: nth($values, 1) * $base-space;
@@ -53,15 +53,10 @@
   }
 }
 
-
 @mixin padding($values) {
   @include property(padding, $values);
 }
 
 @mixin margin($values) {
   @include property(margin, $values);
-}
-
-@mixin absolute($values) {
-  @include property(absolute, $values);
 }
