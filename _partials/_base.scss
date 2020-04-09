@@ -12,6 +12,8 @@
   @return map-get($colors, $type);
 }
 
+$line-height: line(default) * 1rem;
+
 // BORDER-BOX, RESET
 
 html {
