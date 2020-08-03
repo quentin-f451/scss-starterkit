@@ -1,14 +1,1 @@
-.blur {
-  @extend .transition;
-  filter: blur(5px);
-  opacity: 0.1;
 
-  &.lazyloaded {
-    filter: blur(0);
-    opacity: 1;
-  }
-}
-
-.upper {
-  text-transform: uppercase;
-}
