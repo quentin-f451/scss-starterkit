@@ -32,8 +32,8 @@ html {
 
 * {
   margin: 0;
-  letter-spacing: 0.015em;
-  word-spacing: 0.001em;
+  font-feature-settings:"kern" 1;
+  font-kerning: normal;
 
   @if $font-smoothing-moz==true {
     -moz-osx-font-smoothing: grayscale;
