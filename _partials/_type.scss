@@ -19,58 +19,58 @@ small {
 }
 
 .small {
-  font-size: text(xxs, sm);
+  font-size: var(--font-xxs-m);
 
   @include mq(sm) {
-    font-size: text(xxs, default);
+    font-size: var(--font-xxs-d);
   }
 }
 
 .h6 {
-  font-size: text(xs, sm);
+  font-size: var(--font-xs-m);
 
   @include mq(sm) {
-    font-size: text(xs, default);
+    font-size: var(--font-xs-d);
   }
 }
 
 .h5 {
-  font-size: text(sm, sm);
+  font-size: var(--font-sm-m);
 
   @include mq(sm) {
-    font-size: text(sm, default);
+    font-size: var(--font-sm-d);
   }
 }
 
 .h4 {
-  font-size: text(md, sm);
+  font-size: var(--font-md-m);
 
   @include mq(sm) {
-    font-size: text(md, default);
+    font-size: var(--font-md-d);
   }
 }
 
 .h3 {
-  font-size: text(lg, sm);
+  font-size: var(--font-lg-m);
 
   @include mq(sm) {
-    font-size: text(lg, default);
+    font-size: var(--font-lg-d);
   }
 }
 
 .h2 {
-  font-size: text(xl, sm);
+  font-size: var(--font-xl-m);
 
   @include mq(sm) {
-    font-size: text(xl, default);
+    font-size: var(--font-xl-d);
   }
 }
 
 .h1 {
-  font-size: text(xxl, sm);
+  font-size: var(--font-xxl-m);
 
   @include mq(sm) {
-    font-size: text(xxl, default);
+    font-size: var(--font-xxl-d);
   }
 }
 
@@ -85,6 +85,6 @@ small {
 .h5,
 .h6,
 .small {
-  line-height: line(default);
+  line-height: var(--lh);
   font-weight: normal;
 }

@@ -1,0 +1,55 @@
+:root {
+  --font-d: $font-size-desktop;
+  --font-xxs-d: $font-xxs-desktop;
+  --font-xs-d: $font-xs-desktop;
+  --font-sm-d: $font-sm-desktop;
+  --font-md-d: $font-md-desktop;
+  --font-lg-d: $font-lg-desktop;
+  --font-xl-d: $font-xl-desktop;
+  --font-xxl-d: $font-xxl-desktop;
+
+  --font-m: $font-size-mobile;
+  --font-xxs-m: $font-xxs-mobile;
+  --font-xs-m: $font-xs-mobile;
+  --font-sm-m: $font-sm-mobile;
+  --font-md-m: $font-md-mobile;
+  --font-lg-m: $font-lg-mobile;
+  --font-xl-m: $font-xl-mobile;
+  --font-xxl-m: $font-xxl-mobile;
+
+  --lh: $line-height;
+  --lh-xxs: $line-height-xxs;
+  --lh-xs: $line-height-xs;
+  --lh-sm: $line-height-sm;
+  --lh-md: $line-height-md;
+  --lh-lg: $line-height-lg;
+  --lh-xl: $line-height-xl;
+  --lh-xxl: $line-height-xxl;
+
+  --space-d: $font-size-desktop * $line-height;
+  --space-xxs-d: $font-xxs-desktop * $line-height;
+  --space-xs-d: $font-xs-desktop * $line-height;
+  --space-sm-d: $font-sm-desktop * $line-height;
+  --space-md-d: $font-md-desktop * $line-height;
+  --space-lg-d: $font-lg-desktop * $line-height;
+  --space-xl-d: $font-xl-desktop * $line-height;
+  --space-xxl-d: $font-xxl-desktop * $line-height;
+
+  --space-m: $font-size-mobile * $line-height;
+  --space-xxs-m: $font-xxs-mobile * $line-height;
+  --space-xs-m: $font-xs-mobile * $line-height;
+  --space-sm-m: $font-sm-mobile * $line-height;
+  --space-md-m: $font-md-mobile * $line-height;
+  --space-lg-m: $font-lg-mobile * $line-height;
+  --space-xl-m: $font-xl-mobile * $line-height;
+  --space-xxl-m: $font-xxl-mobile * $line-height;
+
+  --margin: $base-space;
+  --margin-xxs: $base-space * 0.1;
+  --margin-xs: $base-space * 0.5;
+  --margin-sm: $base-space * 1;
+  --margin-md: $base-space * 2;
+  --margin-lg: $base-space * 4;
+  --margin-xl: $base-space * 8;
+  --margin-xxl: $base-space * 10;
+}

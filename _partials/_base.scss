@@ -1,38 +1,47 @@
-// INITIATE BASIC CLASSES
+// INITIATE
 
-@function text($size, $type: default) {
-  @return map-get(map-get($texts, $size), $type);
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+  }
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
 }
 
-@function line($size) {
-  @return map-get($lines, $size);
+@mixin transition(
+  $property: $transition-property-default,
+  $duration: $transition-duration-default,
+  $timing: $transition-timing-default,
+  $delay: $transition-delay-default
+) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+  transition-delay: $delay;
 }
 
-@function color($type) {
-  @return map-get($colors, $type);
+.transition {
+  @include transition;
 }
-
-$line-height: line(default) * 1rem;
 
 // BORDER-BOX, RESET
 
 html {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 *,
 *:after,
 *:before {
-  -webkit-box-sizing: inherit;
-  -moz-box-sizing: inherit;
   box-sizing: inherit;
 }
 
 * {
   margin: 0;
-  font-feature-settings:"kern" 1;
+  -webkit-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  -webkit-font-kerning: normal;
   font-kerning: normal;
 
   @if $font-smoothing-moz==true {
@@ -56,41 +65,27 @@ html {
 
 // TYPE SIZE
 
-@function get-vw($target) {
-  $vw-context: ($viewport-width-px * 0.01) * 1px;
-  @return ($target / $vw-context) * 1vw;
-}
-
 html,
 body {
-  font-size: text(default, sm);
-  line-height: line(default);
-  color: color(text);
-  background-color: color(background);
   @extend .font-#{$main-font};
+  font-size: var(--font-m);
+  line-height: var(--lh);
+  color: var(--color-text);
+  background-color: var(--color-bg);
 
   @include mq(sm) {
-    font-size: text(default, default);
-    @if $is-global-viewport-text==true {
-      font-size: get-vw(text(default, default));
-    }
+    font-size: var(--font-d);
   }
 }
 
 html {
-  background: color(background);
+  background: var(--color-bg);
 }
 
 a {
-  color: color(link);
+  color: var(--color-link);
   text-decoration: none;
-
-  &:hover,
-  &:hover * {
-    color: color(hover);
-    text-decoration: none;
-    cursor: pointer;
-  }
+  cursor: pointer;
 }
 
 ul,
@@ -103,6 +98,10 @@ ul {
   list-style-type: none;
 }
 
+ol {
+  list-style-position: inside;
+}
+
 img {
   width: 100%;
 }
@@ -112,22 +111,7 @@ b {
   font-weight: normal;
 }
 
-// __________________________________________________________ //
-
-// TRANSITIONS
-
-@mixin transition(
-  $property: $transition-property-default,
-  $duration: $transition-duration-default,
-  $timing: $transition-timing-default,
-  $delay: $transition-delay-default
-) {
-  transition-property: $property;
-  transition-duration: $duration;
-  transition-timing-function: $timing;
-  transition-delay: $delay;
-}
-
-.transition {
-  @include transition;
+i,
+em {
+  font-style: normal;
 }

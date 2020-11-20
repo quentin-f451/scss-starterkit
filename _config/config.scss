@@ -1,0 +1,90 @@
+// CONFIGURATE DOCUMENT
+
+$font-size-desktop: 16px;
+$font-xxs-desktop: 0.5rem;
+$font-xs-desktop: 0.75rem;
+$font-sm-desktop: 1rem;
+$font-md-desktop: 1.5rem;
+$font-lg-desktop: 2rem;
+$font-xl-desktop: 4rem;
+$font-xxl-desktop: 10rem;
+
+$font-size-mobile: 16px;
+$font-xxs-mobile: 0.5rem;
+$font-xs-mobile: 0.75rem;
+$font-sm-mobile: 1rem;
+$font-md-mobile: 1.5rem;
+$font-lg-mobile: 2rem;
+$font-xl-mobile: 4rem;
+$font-xxl-mobile: 10rem;
+
+$line-height: 1.125;
+$line-height-xxs: 0.75;
+$line-height-xs: 1;
+$line-height-sm: 1.125;
+$line-height-md: 1.25;
+$line-height-lg: 1.5;
+$line-height-xl: 2;
+$line-height-xxl: 4;
+
+$base-space: 10px;
+
+:root {
+  --columns: 12;
+  --color-text: black;
+  --color-link: black;
+  --color-bg: white;
+}
+
+// __________________________________________________________ //
+
+// FONTS
+
+$font-smoothing-moz: true;
+$font-smoothing-webkit: true;
+
+$main-font: 1;
+$fonts: (
+  1: (
+    name: Helvetica,
+    fallback: "Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif",
+    url: "",
+    weight: normal,
+    style: normal,
+    display: auto,
+  ),
+  2: (
+    name: Times,
+    fallback: "Times New Roman, Times, serif",
+    url: "",
+    weight: normal,
+    style: normal,
+    display: auto,
+  ),
+);
+
+// __________________________________________________________ //
+
+// BREAKPOINTS
+
+$breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md: 1000px,
+  lg: 1200px,
+  xl: 1500px,
+  xxl: 1800px,
+);
+
+// __________________________________________________________ //
+
+// TRANSITION
+
+$transition-property-default: all;
+$transition-duration-default: 0.3s;
+$transition-timing-default: cubic-bezier(0.7, 0, 0.3, 1);
+$transition-delay-default: 0s;
+
+// __________________________________________________________ //
+
+// FREE CONFIG
