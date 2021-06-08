@@ -1,26 +1,5 @@
 // INITIATE
 
-@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
-  @if map-has-key($mq-breakpoints, $mq-breakpoint) {
-    $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
-  }
-  @media screen and (min-width: #{$mq-breakpoint}) {
-    @content;
-  }
-}
-
-@mixin transition(
-  $property: $transition-property-default,
-  $duration: $transition-duration-default,
-  $timing: $transition-timing-default,
-  $delay: $transition-delay-default
-) {
-  transition-property: $property;
-  transition-duration: $duration;
-  transition-timing-function: $timing;
-  transition-delay: $delay;
-}
-
 .transition {
   @include transition;
 }
@@ -68,14 +47,10 @@ html {
 html,
 body {
   @extend .font-#{$main-font};
-  font-size: var(--font-m);
+  font-size: var(--fs);
   line-height: var(--lh);
   color: var(--color-text);
   background-color: var(--color-bg);
-
-  @include mq(sm) {
-    font-size: var(--font-d);
-  }
 }
 
 html {

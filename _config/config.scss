@@ -1,33 +1,109 @@
 // CONFIGURATE DOCUMENT
 
-$font-size-desktop: 16px;
-$font-xxs-desktop: 0.5rem;
-$font-xs-desktop: 0.75rem;
-$font-sm-desktop: 1rem;
-$font-md-desktop: 1.5rem;
-$font-lg-desktop: 2rem;
-$font-xl-desktop: 4rem;
-$font-xxl-desktop: 10rem;
+$fontsize: (
+  xxs: (
+    desktop: (
+      font-size: 0.5rem,
+      line-height: 0.625rem,
+    ),
+    mobile: (
+      font-size: 0.5rem,
+      line-height: 0.625rem,
+    ),
+  ),
+  xs: (
+    desktop: (
+      font-size: 0.75rem,
+      line-height: 0.9375rem,
+    ),
+    mobile: (
+      font-size: 0.75rem,
+      line-height: 0.9375rem,
+    ),
+  ),
+  sm: (
+    desktop: (
+      font-size: 1rem,
+      line-height: 1.25rem,
+    ),
+    mobile: (
+      font-size: 1rem,
+      line-height: 1.25rem,
+    ),
+  ),
+  md: (
+    desktop: (
+      font-size: 1.5rem,
+      line-height: 1.875rem,
+    ),
+    mobile: (
+      font-size: 1.5rem,
+      line-height: 1.875rem,
+    ),
+  ),
+  lg: (
+    desktop: (
+      font-size: 2rem,
+      line-height: 2.5rem,
+    ),
+    mobile: (
+      font-size: 2rem,
+      line-height: 2.5rem,
+    ),
+  ),
+  xl: (
+    desktop: (
+      font-size: 5rem,
+      line-height: 6.25rem,
+    ),
+    mobile: (
+      font-size: 5rem,
+      line-height: 6.25rem,
+    ),
+  ),
+  xxl: (
+    desktop: (
+      font-size: 10rem,
+      line-height: 12.5rem,
+    ),
+    mobile: (
+      font-size: 10rem,
+      line-height: 12.5rem,
+    ),
+  ),
+);
 
-$font-size-mobile: 16px;
-$font-xxs-mobile: 0.5rem;
-$font-xs-mobile: 0.75rem;
-$font-sm-mobile: 1rem;
-$font-md-mobile: 1.5rem;
-$font-lg-mobile: 2rem;
-$font-xl-mobile: 4rem;
-$font-xxl-mobile: 10rem;
+$margin: (
+  xxs: 0.1,
+  xs: 0.5,
+  sm: 1,
+  md: 2,
+  lg: 4,
+  xl: 8,
+  xxl: 16,
+);
 
-$line-height: 1.125;
-$line-height-xxs: 0.75;
-$line-height-xs: 1;
-$line-height-sm: 1.125;
-$line-height-md: 1.25;
-$line-height-lg: 1.5;
-$line-height-xl: 2;
-$line-height-xxl: 4;
+$space-d: (
+  xxs: 0.1,
+  xs: 0.5,
+  sm: 1,
+  md: 2,
+  lg: 4,
+  xl: 8,
+  xxl: 16,
+);
 
-$base-space: 10px;
+$space-m: (
+  xxs: 0.1,
+  xs: 0.5,
+  sm: 1,
+  md: 2,
+  lg: 4,
+  xl: 8,
+  xxl: 16,
+);
+
+$base-space: 8px;
 
 :root {
   --columns: 12;

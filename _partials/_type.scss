@@ -19,59 +19,38 @@ small {
 }
 
 .small {
-  font-size: var(--font-xxs-m);
-
-  @include mq(sm) {
-    font-size: var(--font-xxs-d);
-  }
+  font-size: var(--fs-xxs);
+  line-height: var(--lh-xxs);
 }
 
 .h6 {
-  font-size: var(--font-xs-m);
-
-  @include mq(sm) {
-    font-size: var(--font-xs-d);
-  }
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
 }
 
 .h5 {
-  font-size: var(--font-sm-m);
-
-  @include mq(sm) {
-    font-size: var(--font-sm-d);
-  }
+  font-size: var(--fs-sm);
+  line-height: var(--lh-sm);
 }
 
 .h4 {
-  font-size: var(--font-md-m);
-
-  @include mq(sm) {
-    font-size: var(--font-md-d);
-  }
+  font-size: var(--fs-md);
+  line-height: var(--lh-md);
 }
 
 .h3 {
-  font-size: var(--font-lg-m);
-
-  @include mq(sm) {
-    font-size: var(--font-lg-d);
-  }
+  font-size: var(--fs-lg);
+  line-height: var(--lh-lg);
 }
 
 .h2 {
-  font-size: var(--font-xl-m);
-
-  @include mq(sm) {
-    font-size: var(--font-xl-d);
-  }
+  font-size: var(--fs-xl);
+  line-height: var(--lh-xl);
 }
 
 .h1 {
-  font-size: var(--font-xxl-m);
-
-  @include mq(sm) {
-    font-size: var(--font-xxl-d);
-  }
+  font-size: var(--fs-xxl);
+  line-height: var(--lh-xxl);
 }
 
 // __________________________________________________________ //
@@ -85,6 +64,5 @@ small {
 .h5,
 .h6,
 .small {
-  line-height: var(--lh);
   font-weight: normal;
 }
