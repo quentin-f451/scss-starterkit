@@ -7,25 +7,25 @@
   $left: $property + "-left";
 
   @if length($values) == 1 {
-    #{$top}: nth($values, 1) * $base-space;
-    #{$bottom}: nth($values, 1) * $base-space;
-    #{$right}: nth($values, 1) * $base-space;
-    #{$left}: nth($values, 1) * $base-space;
+    #{$top}: calc(#{nth($values, 1)} * var(--base-space));
+    #{$bottom}: calc(#{nth($values, 1)} * var(--base-space));
+    #{$right}: calc(#{nth($values, 1)} * var(--base-space));
+    #{$left}: calc(#{nth($values, 1)} * var(--base-space));
   } @else if length($values) == 2 {
-    #{$top}: nth($values, 1) * $base-space;
-    #{$bottom}: nth($values, 1) * $base-space;
-    #{$right}: nth($values, 2) * $base-space;
-    #{$left}: nth($values, 2) * $base-space;
+    #{$top}: calc(#{nth($values, 1)} * var(--base-space));
+    #{$bottom}: calc(#{nth($values, 1)} * var(--base-space));
+    #{$right}: calc(#{nth($values, 2)} * var(--base-space));
+    #{$left}: calc(#{nth($values, 2)} * var(--base-space));
   } @else if length($values) == 3 {
-    #{$top}: nth($values, 1) * $base-space;
-    #{$bottom}: nth($values, 3) * $base-space;
-    #{$right}: nth($values, 2) * $base-space;
-    #{$left}: nth($values, 2) * $base-space;
+    #{$top}: calc(#{nth($values, 1)} * var(--base-space));
+    #{$bottom}: calc(#{nth($values, 3)} * var(--base-space));
+    #{$right}: calc(#{nth($values, 2)} * var(--base-space));
+    #{$left}: calc(#{nth($values, 2)} * var(--base-space));
   } @else if length($values) == 4 {
-    #{$top}: nth($values, 1) * $base-space;
-    #{$bottom}: nth($values, 3) * $base-space;
-    #{$right}: nth($values, 2) * $base-space;
-    #{$left}: nth($values, 4) * $base-space;
+    #{$top}: calc(#{nth($values, 1)} * var(--base-space));
+    #{$bottom}: calc(#{nth($values, 3)} * var(--base-space));
+    #{$right}: calc(#{nth($values, 2)} * var(--base-space));
+    #{$left}: calc(#{nth($values, 4)} * var(--base-space));
   }
 }
 
