@@ -37,8 +37,6 @@
   --space-xl: #{getLineHeight(sm, mobile) * map-get($space-m, xl)};
   --space-xxl: #{getLineHeight(sm, mobile) * map-get($space-m, xxl)};
 
-  --header-height: calc(var(--lh-xl) + var(--margin-sm) * 3);
-
   @include mq(sm) {
     --base-space: 8px;
 
@@ -68,7 +66,5 @@
     --space-lg: #{getLineHeight(sm, desktop) * map-get($space-d, lg)};
     --space-xl: #{getLineHeight(sm, desktop) * map-get($space-d, xl)};
     --space-xxl: #{getLineHeight(sm, desktop) * map-get($space-d, xxl)};
-
-    --header-height: 0;
   }
 }
