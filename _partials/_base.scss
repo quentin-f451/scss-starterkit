@@ -1,9 +1,3 @@
-// INITIATE
-
-.transition {
-  @include transition;
-}
-
 // BORDER-BOX, RESET
 
 html {
@@ -22,14 +16,8 @@ html {
   font-feature-settings: "kern" 1;
   -webkit-font-kerning: normal;
   font-kerning: normal;
-
-  @if $font-smoothing-moz==true {
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  @if $font-smoothing-webkit==true {
-    -webkit-font-smoothing: antialiased;
-  }
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 body,
@@ -46,9 +34,8 @@ html {
 
 html,
 body {
-  @extend .font-#{$main-font};
-  font-size: var(--fs);
-  line-height: var(--lh);
+  @include font;
+  @include fs;
   color: var(--color-text);
   background-color: var(--color-bg);
 }

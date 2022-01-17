@@ -19,10 +19,11 @@
   transition-delay: $delay;
 }
 
-@function getFontSize($size, $type: desktop) {
-  @return map-get(map-get(map-get($fontsize, $size), $type), font-size);
+@mixin fs($size: main) {
+  font-size: var(--lh-#{$size});
+  line-height: var(--lh-#{$size});
 }
 
-@function getLineHeight($size, $type: desktop) {
-  @return map-get(map-get(map-get($fontsize, $size), $type), line-height);
+@mixin font($font: main) {
+  font-family: map-get(map-get($fonts, $font), name), unquote(map-get(map-get($fonts, $font), fallback));
 }

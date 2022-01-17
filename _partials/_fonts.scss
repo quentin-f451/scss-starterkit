@@ -1,19 +1,14 @@
-// INITIATE FONTS
+// // INITIATE FONTS
 
 @each $i, $font-properties in $fonts {
-  @if (map-get($font-properties, url) != "") {
+  @if (map-get($font-properties, withFile) != false) {
     @font-face {
       font-family: map-get($font-properties, name);
-      src: url(map-get($font-properties, url) + ".woff") format("woff"), url(map-get($font-properties, url) + ".woff2") format("woff2");
-      font-weight: map-get($font-properties, weight);
-      font-style: map-get($font-properties, style);
-      font-display: map-get($font-properties, display);
+      src: url("../fonts/" + map-get($font-properties, name) + ".woff") format("woff"),
+        url("../fonts/" + map-get($font-properties, name) + ".woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+      font-display: auto;
     }
-  }
-}
-
-@each $i, $font-properties in $fonts {
-  .font-#{$i} {
-    font-family: map-get($font-properties, name), unquote(map-get($font-properties, fallback));
   }
 }

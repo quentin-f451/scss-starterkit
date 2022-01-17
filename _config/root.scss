@@ -1,66 +1,15 @@
 :root {
-  --margin: #{$base-space};
-  --margin-xxs: #{$base-space * map-get($margin, xxs)};
-  --margin-xs: #{$base-space * map-get($margin, xs)};
-  --margin-sm: #{$base-space * map-get($margin, sm)};
-  --margin-md: #{$base-space * map-get($margin, md)};
-  --margin-lg: #{$base-space * map-get($margin, lg)};
-  --margin-xl: #{$base-space * map-get($margin, xl)};
-  --margin-xxl: #{$base-space * map-get($margin, xxl)};
+  @each $size, $value in $margin {
+    --margin-#{$size}: calc(var(--base-space) * #{$value});
+  }
 
-  --fs: #{getFontSize(sm, mobile)};
-  --fs-xxs: #{getFontSize(xxs, mobile)};
-  --fs-xs: #{getFontSize(xs, mobile)};
-  --fs-sm: #{getFontSize(sm, mobile)};
-  --fs-md: #{getFontSize(md, mobile)};
-  --fs-lg: #{getFontSize(lg, mobile)};
-  --fs-xl: #{getFontSize(xl, mobile)};
-  --fs-xxl: #{getFontSize(xxl, mobile)};
-
-  --lh: #{getLineHeight(sm, mobile)};
-  --lh-xxs: #{getLineHeight(xxs, mobile)};
-  --lh-xs: #{getLineHeight(xs, mobile)};
-  --lh-sm: #{getLineHeight(sm, mobile)};
-  --lh-md: #{getLineHeight(md, mobile)};
-  --lh-lg: #{getLineHeight(lg, mobile)};
-  --lh-xl: #{getLineHeight(xl, mobile)};
-  --lh-xxl: #{getLineHeight(xxl, mobile)};
-
-  --space: #{getLineHeight(sm, mobile)};
-  --space-xxs: #{getLineHeight(sm, mobile) * map-get($space-m, xxs)};
-  --space-xs: #{getLineHeight(sm, mobile) * map-get($space-m, xs)};
-  --space-sm: #{getLineHeight(sm, mobile) * map-get($space-m, sm)};
-  --space-md: #{getLineHeight(sm, mobile) * map-get($space-m, md)};
-  --space-lg: #{getLineHeight(sm, mobile) * map-get($space-m, lg)};
-  --space-xl: #{getLineHeight(sm, mobile) * map-get($space-m, xl)};
-  --space-xxl: #{getLineHeight(sm, mobile) * map-get($space-m, xxl)};
-
-  @include mq(sm) {
-    --fs: #{getFontSize(sm, desktop)};
-    --fs-xxs: #{getFontSize(xxs, desktop)};
-    --fs-xs: #{getFontSize(xs, desktop)};
-    --fs-sm: #{getFontSize(sm, desktop)};
-    --fs-md: #{getFontSize(md, desktop)};
-    --fs-lg: #{getFontSize(lg, desktop)};
-    --fs-xl: #{getFontSize(xl, desktop)};
-    --fs-xxl: #{getFontSize(xxl, desktop)};
-
-    --lh: #{getLineHeight(sm, desktop)};
-    --lh-xxs: #{getLineHeight(xxs, desktop)};
-    --lh-xs: #{getLineHeight(xs, desktop)};
-    --lh-sm: #{getLineHeight(sm, desktop)};
-    --lh-md: #{getLineHeight(md, desktop)};
-    --lh-lg: #{getLineHeight(lg, desktop)};
-    --lh-xl: #{getLineHeight(xl, desktop)};
-    --lh-xxl: #{getLineHeight(xxl, desktop)};
-
-    --space: #{getLineHeight(sm, desktop)};
-    --space-xxs: #{getLineHeight(sm, desktop) * map-get($space-d, xxs)};
-    --space-xs: #{getLineHeight(sm, desktop) * map-get($space-d, xs)};
-    --space-sm: #{getLineHeight(sm, desktop) * map-get($space-d, sm)};
-    --space-md: #{getLineHeight(sm, desktop) * map-get($space-d, md)};
-    --space-lg: #{getLineHeight(sm, desktop) * map-get($space-d, lg)};
-    --space-xl: #{getLineHeight(sm, desktop) * map-get($space-d, xl)};
-    --space-xxl: #{getLineHeight(sm, desktop) * map-get($space-d, xxl)};
+  @each $size, $item in $fontsize {
+    @each $screen, $values in $item {
+      @include mq($screen) {
+        @each $type, $value in $values {
+          --#{$type}-#{$size}: #{$value};
+        }
+      }
+    }
   }
 }

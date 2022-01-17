@@ -1,112 +1,20 @@
 // CONFIGURATE DOCUMENT
 
 $fontsize: (
-  xxs: (
-    desktop: (
-      font-size: 0.5rem,
-      line-height: 0.625rem,
-    ),
-    mobile: (
-      font-size: 0.5rem,
-      line-height: 0.625rem,
-    ),
-  ),
-  xs: (
-    desktop: (
-      font-size: 0.75rem,
-      line-height: 0.9375rem,
-    ),
-    mobile: (
-      font-size: 0.75rem,
-      line-height: 0.9375rem,
-    ),
-  ),
-  sm: (
-    desktop: (
-      font-size: 1rem,
-      line-height: 1.25rem,
-    ),
-    mobile: (
-      font-size: 1rem,
-      line-height: 1.25rem,
-    ),
-  ),
-  md: (
-    desktop: (
-      font-size: 1.5rem,
-      line-height: 1.875rem,
-    ),
-    mobile: (
-      font-size: 1.5rem,
-      line-height: 1.875rem,
-    ),
-  ),
-  lg: (
-    desktop: (
-      font-size: 2rem,
-      line-height: 2.5rem,
-    ),
-    mobile: (
-      font-size: 2rem,
-      line-height: 2.5rem,
-    ),
-  ),
-  xl: (
-    desktop: (
-      font-size: 5rem,
-      line-height: 6.25rem,
-    ),
-    mobile: (
-      font-size: 5rem,
-      line-height: 6.25rem,
-    ),
-  ),
-  xxl: (
-    desktop: (
-      font-size: 10rem,
-      line-height: 12.5rem,
-    ),
-    mobile: (
-      font-size: 10rem,
-      line-height: 12.5rem,
+  main: (
+    sm: (
+      fs: 12px,
+      lh: 14px,
     ),
   ),
 );
 
 $margin: (
-  xxs: 0.1,
-  xs: 0.5,
   sm: 1,
-  md: 2,
-  lg: 4,
-  xl: 8,
-  xxl: 16,
 );
-
-$space-d: (
-  xxs: 0.1,
-  xs: 0.5,
-  sm: 1,
-  md: 2,
-  lg: 4,
-  xl: 8,
-  xxl: 16,
-);
-
-$space-m: (
-  xxs: 0.1,
-  xs: 0.5,
-  sm: 1,
-  md: 2,
-  lg: 4,
-  xl: 8,
-  xxl: 16,
-);
-
-$base-space: 8px;
 
 :root {
-  --columns: 12;
+  --base-space: 8px;
   --color-text: black;
   --color-link: black;
   --color-bg: white;
@@ -116,26 +24,11 @@ $base-space: 8px;
 
 // FONTS
 
-$font-smoothing-moz: true;
-$font-smoothing-webkit: true;
-
-$main-font: 1;
 $fonts: (
-  1: (
+  main: (
     name: Helvetica,
     fallback: "Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif",
-    url: "",
-    weight: normal,
-    style: normal,
-    display: auto,
-  ),
-  2: (
-    name: Times,
-    fallback: "Times New Roman, Times, serif",
-    url: "",
-    weight: normal,
-    style: normal,
-    display: auto,
+    withFile: false,
   ),
 );
 
@@ -146,10 +39,6 @@ $fonts: (
 $breakpoints: (
   xs: 0px,
   sm: 576px,
-  md: 1000px,
-  lg: 1200px,
-  xl: 1500px,
-  xxl: 1800px,
 );
 
 // __________________________________________________________ //
