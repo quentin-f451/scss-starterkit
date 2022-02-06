@@ -20,7 +20,7 @@
 }
 
 @mixin fs($size: main) {
-  font-size: var(--lh-#{$size});
+  font-size: var(--fs-#{$size});
   line-height: var(--lh-#{$size});
 }
 
