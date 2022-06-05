@@ -13,7 +13,7 @@
   $timing: $transition-timing-default,
   $delay: $transition-delay-default
 ) {
-  transition-property: $property;
+  transition-property: #{$property};
   transition-duration: $duration;
   transition-timing-function: $timing;
   transition-delay: $delay;
