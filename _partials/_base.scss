@@ -44,6 +44,11 @@ html {
   background: var(--color-bg);
 }
 
+html.panel {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
 a {
   color: var(--color-link);
   text-decoration: none;
