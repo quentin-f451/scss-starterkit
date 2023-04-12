@@ -27,3 +27,15 @@
 @mixin font($font: main) {
   font-family: map-get(map-get($fonts, $font), name), unquote(map-get(map-get($fonts, $font), fallback));
 }
+
+@mixin touch {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
+@mixin notouch {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
