@@ -6,26 +6,26 @@
   $right: $property + "-right";
   $left: $property + "-left";
 
-  @if length($values) == 1 {
-    #{$top}: calc(#{nth($values, 1)} * var(--base-space));
-    #{$bottom}: calc(#{nth($values, 1)} * var(--base-space));
-    #{$right}: calc(#{nth($values, 1)} * var(--base-space));
-    #{$left}: calc(#{nth($values, 1)} * var(--base-space));
-  } @else if length($values) == 2 {
-    #{$top}: calc(#{nth($values, 1)} * var(--base-space));
-    #{$bottom}: calc(#{nth($values, 1)} * var(--base-space));
-    #{$right}: calc(#{nth($values, 2)} * var(--base-space));
-    #{$left}: calc(#{nth($values, 2)} * var(--base-space));
-  } @else if length($values) == 3 {
-    #{$top}: calc(#{nth($values, 1)} * var(--base-space));
-    #{$bottom}: calc(#{nth($values, 3)} * var(--base-space));
-    #{$right}: calc(#{nth($values, 2)} * var(--base-space));
-    #{$left}: calc(#{nth($values, 2)} * var(--base-space));
-  } @else if length($values) == 4 {
-    #{$top}: calc(#{nth($values, 1)} * var(--base-space));
-    #{$bottom}: calc(#{nth($values, 3)} * var(--base-space));
-    #{$right}: calc(#{nth($values, 2)} * var(--base-space));
-    #{$left}: calc(#{nth($values, 4)} * var(--base-space));
+  @if list.length($values) == 1 {
+    #{$top}: calc(#{list.nth($values, 1)} * var(--base-space));
+    #{$bottom}: calc(#{list.nth($values, 1)} * var(--base-space));
+    #{$right}: calc(#{list.nth($values, 1)} * var(--base-space));
+    #{$left}: calc(#{list.nth($values, 1)} * var(--base-space));
+  } @else if list.length($values) == 2 {
+    #{$top}: calc(#{list.nth($values, 1)} * var(--base-space));
+    #{$bottom}: calc(#{list.nth($values, 1)} * var(--base-space));
+    #{$right}: calc(#{list.nth($values, 2)} * var(--base-space));
+    #{$left}: calc(#{list.nth($values, 2)} * var(--base-space));
+  } @else if list.length($values) == 3 {
+    #{$top}: calc(#{list.nth($values, 1)} * var(--base-space));
+    #{$bottom}: calc(#{list.nth($values, 3)} * var(--base-space));
+    #{$right}: calc(#{list.nth($values, 2)} * var(--base-space));
+    #{$left}: calc(#{list.nth($values, 2)} * var(--base-space));
+  } @else if list.length($values) == 4 {
+    #{$top}: calc(#{list.nth($values, 1)} * var(--base-space));
+    #{$bottom}: calc(#{list.nth($values, 3)} * var(--base-space));
+    #{$right}: calc(#{list.nth($values, 2)} * var(--base-space));
+    #{$left}: calc(#{list.nth($values, 4)} * var(--base-space));
   }
 }
 
