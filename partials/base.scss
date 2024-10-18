@@ -1,47 +1,25 @@
-// BORDER-BOX, RESET
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-}
+@use "../config/functions" as *;
 
 * {
   margin: 0;
-  -webkit-font-feature-settings: 'kern' 1;
-  font-feature-settings: 'kern' 1;
+  -webkit-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
   -webkit-font-kerning: normal;
   font-kerning: normal;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
-body,
-html {
+html,
+body {
   -webkit-tap-highlight-color: transparent;
   height: 100%;
   margin: 0 !important;
   padding: 0 !important;
-}
-
-// __________________________________________________________ //
-
-// TYPE SIZE
-
-html,
-body {
+  color: var(--color-text);
+  background: var(--color-bg);
   @include font;
   @include fs;
-  color: var(--color-text);
-  background-color: var(--color-bg);
-}
-
-html {
-  background: var(--color-bg);
 }
 
 a {
@@ -65,9 +43,7 @@ ol {
 }
 
 img {
-  html:not(.panel) & {
-    width: 100%;
-  }
+  width: 100%;
 }
 
 strong,

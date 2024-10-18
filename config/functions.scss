@@ -1,0 +1,69 @@
+@use "sass:map";
+@use "sass:string";
+@use "config" as *;
+
+@mixin mq($mq-breakpoint, $mq-breakpoints: $breakpoints) {
+  @if map.has-key($mq-breakpoints, $mq-breakpoint) {
+    $mq-breakpoint: map.get($mq-breakpoints, $mq-breakpoint);
+  }
+  @media screen and (min-width: #{$mq-breakpoint}) {
+    @content;
+  }
+}
+
+@mixin transition(
+  $property: map-get($transition, property),
+  $duration: map-get($transition, duration),
+  $timing: map-get($transition, timing),
+  $delay: map-get($transition, delay)
+) {
+  transition-property: #{$property};
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+  transition-delay: $delay;
+}
+
+@mixin fs($size: main) {
+  font-size: var(--fs-#{$size});
+  line-height: var(--lh-#{$size});
+}
+
+@mixin font($font: main) {
+  font-family: map.get(map.get($fonts, $font), name), string.unquote(map.get(map.get($fonts, $font), fallback));
+}
+
+@mixin touch {
+  @media (hover: none) and (pointer: coarse) {
+    @content;
+  }
+}
+
+@mixin notouch {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+////////////////////////////
+
+:root {
+  --base-space: #{$space};
+
+  @each $color, $value in $colors {
+    --color-#{$color}: #{$value};
+  }
+
+  @each $size, $value in $margin {
+    --margin-#{$size}: calc(var(--base-space) * #{$value});
+  }
+
+  @each $size, $item in $fontsize {
+    @each $screen, $values in $item {
+      @include mq($screen) {
+        @each $type, $value in $values {
+          --#{$type}-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-// // INITIATE MARGINS AND PADDING
+@use "sass:list";
 
 @mixin property($property, $values) {
   $top: $property + "-top";
