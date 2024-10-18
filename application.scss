@@ -1,19 +1,15 @@
-// GLOBAL SCSS
-
 // IMPORT LIBRARIES
-@import "_lib/_normalize.scss"; // Normalize.css - CSS Reset
+@use "lib/normalize";
 
 //IMPORT CONFIG
-@import "_config/config"; // Initial values
-@import "_config/functions"; // Initial functions
-@import "_config/root"; // Initial root
+@use "config/config";
+@use "config/functions";
+@use "config/root";
 
 // IMPORT PARTIALS
-@import "_partials/_base"; // Initiate basic elements
-@import "_partials/_fonts"; // Initiate fonts
-@import "_partials/_margins"; // Initiate margins and padding
+@use "partials/base";
+@use "partials/fonts";
+@use "partials/margins";
 
 // IMPORT MODULES
-// Add here the scss files for the website
-
-@import "_modules/base";
+@use "modules/init";

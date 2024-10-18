@@ -1,0 +1,40 @@
+$fontsize: (
+  main: (
+    xs: (
+      fs: 12px,
+      lh: 14px,
+    ),
+  ),
+);
+
+$space: 8px;
+
+$margin: (
+  sm: 1,
+);
+
+$colors: (
+  text: black,
+  link: black,
+  bg: white,
+);
+
+$fonts: (
+  main: (
+    name: Helvetica,
+    fallback: "Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif",
+    withFile: false,
+  ),
+);
+
+$breakpoints: (
+  xs: 0px,
+  sm: 576px,
+);
+
+$transition: (
+  property: all,
+  duration: 0.3s,
+  timing: cubic-bezier(0.7, 0, 0.3, 1),
+  delay: 0s,
+);

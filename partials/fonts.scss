@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "../config/config" as *;
+
+// // INITIATE FONTS
+
+@each $i, $font-properties in $fonts {
+  @if (map.get($font-properties, withFile) != false) {
+    @font-face {
+      font-family: map.get($font-properties, name);
+      src: url("../fonts/" + map.get($font-properties, name) + ".woff") format("woff"),
+        url("../fonts/" + map.get($font-properties, name) + ".woff2") format("woff2");
+      font-weight: normal;
+      font-style: normal;
+      font-display: auto;
+    }
+  }
+}
