@@ -1,8 +1,6 @@
 @use "sass:map";
 @use "../config/config" as *;
 
-// // INITIATE FONTS
-
 @each $i, $font-properties in $fonts {
   @if (map.get($font-properties, withFile) != false) {
     @font-face {
