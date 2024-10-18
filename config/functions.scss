@@ -12,10 +12,10 @@
 }
 
 @mixin transition(
-  $property: map-get($transition, property),
-  $duration: map-get($transition, duration),
-  $timing: map-get($transition, timing),
-  $delay: map-get($transition, delay)
+  $property: map.get($transition, property),
+  $duration: map.get($transition, duration),
+  $timing: map.get($transition, timing),
+  $delay: map.get($transition, delay)
 ) {
   transition-property: #{$property};
   transition-duration: $duration;
