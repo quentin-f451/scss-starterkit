@@ -3,13 +3,12 @@
 
 //IMPORT CONFIG
 @use "config/config";
-@use "config/functions";
 @use "config/root";
 
 // IMPORT PARTIALS
+@use "partials/functions";
 @use "partials/base";
 @use "partials/fonts";
-@use "partials/margins";
 
 // IMPORT MODULES
 @use "modules/init";
