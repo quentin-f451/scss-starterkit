@@ -5,8 +5,7 @@
   @if (map.get($font-properties, withFile) != false) {
     @font-face {
       font-family: map.get($font-properties, name);
-      src: url("../fonts/" + map.get($font-properties, name) + ".woff") format("woff"),
-        url("../fonts/" + map.get($font-properties, name) + ".woff2") format("woff2");
+      src: url("../fonts/" + map.get($font-properties, name) + ".woff2") format("woff2"), url("../fonts/" + map.get($font-properties, name) + ".woff") format("woff");
       font-weight: normal;
       font-style: normal;
       font-display: auto;
